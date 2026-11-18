@@ -4,7 +4,7 @@ import { Phone, AlertCircle } from 'lucide-react';
 export default function EmergencyFooter() {
   return (
     <footer
-      className="mt-auto border-t border-borderSubtle-light bg-surfaceSubtle-light/70 dark:border-borderSubtle-dark dark:bg-surfaceSubtle-dark/70 py-4 transition-colors"
+      className="mt-auto border-t border-borderSubtle-light bg-surfaceSubtle-light/70 dark:border-borderSubtle-dark dark:bg-surfaceSubtle-dark/70 py-4 pb-safe transition-colors"
       aria-label="Favqulodda yordam raqamlari"
     >
       <div className="max-w-reading mx-auto px-4 sm:px-6">

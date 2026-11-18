@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Building2, Scale, HeartHandshake, Shield } from 'lucide-react';
+import { Phone, Building2, Scale, HeartHandshake, Shield, Globe, Users } from 'lucide-react';
 
 export const CONTACT_REGISTRY = {
   hotline_1146: {
@@ -8,7 +8,7 @@ export const CONTACT_REGISTRY = {
     phone: '1146',
     phoneDisplay: '1146',
     badge: '24/7 &bull; Bepul',
-    desc: "Tazyiq va zo'ravonlikdan jabrlangan xotin-qizlar uchun davlat ishonch telefoni. Mutaxassislar bilan maxfiy suhbat va yo'l-yo'riq.",
+    desc: "Tazyiq, zo'ravonlik yoki shantajga uchragan xotin-qizlar va bolalar uchun davlat ishonch telefoni. Mutaxassislar bilan to'liq maxfiy suhbat.",
     icon: Phone,
     highlight: true,
   },
@@ -18,7 +18,7 @@ export const CONTACT_REGISTRY = {
     phone: '102',
     phoneDisplay: '102',
     badge: 'Favqulodda tezkor',
-    desc: "Bevosita jismoniy xavf, kaltaklash yoki uydan haydash holatlarida patrul xodimlarini zudlik bilan chaqirish.",
+    desc: "Hayotga bevosita xavf, jismoniy zo'ravonlik, ta'qib qilish yoki mashinadan tushirmaslik holatlarida patrul chaqirish.",
     icon: Shield,
     highlight: false,
   },
@@ -28,7 +28,7 @@ export const CONTACT_REGISTRY = {
     phone: '1140',
     phoneDisplay: '1140 / Mahalliy markaz',
     badge: 'Davlat xizmati',
-    desc: "30 kunlik bepul Himoya orderi rasmiylashtirish, vaqtinchalik boshpana (shelter) va ijtimoiy hamrohlik qilish.",
+    desc: "30 kunlik bepul Himoya orderi rasmiylashtirish, vaqtinchalik xavfsiz boshpana (shelter) va ijtimoiy hamrohlik.",
     icon: Building2,
     highlight: false,
   },
@@ -38,7 +38,7 @@ export const CONTACT_REGISTRY = {
     phone: '1008',
     phoneDisplay: '1008',
     badge: 'Huquqiy ko‘mak',
-    desc: "Himoya orderini olish, aliment undirish, mulk huquqi va ajrashish masalalarida professional bepul advokatlik maslahati.",
+    desc: "Himoya orderi olish, shantaj va tahdidlar yuzasidan ariza berish bo'yicha bepul professional huquqshunos maslahati.",
     icon: Scale,
     highlight: false,
   },
@@ -48,9 +48,29 @@ export const CONTACT_REGISTRY = {
     phone: '1146',
     phoneDisplay: '1146 orqali',
     badge: 'Ruhiy ko‘mak',
-    desc: "Ruhiy bosim, depressiya va qo'rquv holatlarini yengish uchun tajribali ayol psixologlar ko'magi.",
+    desc: "Ruhiy bosim, qo'rquv, aybdorlik hissi yoki depressiyani yengish uchun tajribali psixologlar ko'magi.",
     icon: HeartHandshake,
     highlight: false,
+  },
+  cyber_102: {
+    id: 'cyber_102',
+    title: 'IIV Kiberxavfsizlik markazi',
+    phone: '1102',
+    phoneDisplay: '1102',
+    badge: 'Kiberxavfsizlik',
+    desc: "Shaxsiy suratlarni tarqatish bilan shantaj qilish (sextortion), akkaunt buzish va internetdagi tahdidlar bo'yicha tezkor murojaat.",
+    icon: Globe,
+    highlight: true,
+  },
+  trusted_adult: {
+    id: 'trusted_adult',
+    title: 'Ishonchli katta yoshli inson',
+    phone: '1146',
+    phoneDisplay: '1146 / Oila',
+    badge: 'Bolalar himoyasi',
+    desc: "Ota-onangiz, yaqin qarindoshingiz yoki maktabdagi ishonchli o'qituvchingizga ayting. Uyat yoki ayb aslo sizda emas.",
+    icon: Users,
+    highlight: true,
   },
 };
 

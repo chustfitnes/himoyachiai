@@ -1,64 +1,68 @@
 # HimoyaAI — "Raqamli avlod qizlari" Tanlovi Uchun 2 Daqiqalik Taqdimot Ssenariysi (Demo Script)
 
 > **Vaqt me'yori:** 120 soniya (2 daqiqa)  
-> **Maqsad:** Hakamlar hay'atiga loyihaning ijtimoiy dolzarbligi, gibrid sun'iy intellekt xavfsizligi va maxfiylik arxitekturasini aniq namoyish etish.
+> **Maqsad:** Hakamlar hay'atiga loyihaning ijtimoiy dolzarbligi, keng qamrovi (oila, ko'cha, taksi, internet), gibrid sun'iy intellekt xavfsizligi va maxfiylik arxitekturasini aniq namoyish etish.
 
 ---
 
 ## ⏱ 0:00 – 0:25 | 1-Qism: Muammo (The Problem)
 
 **Spiker:**  
-"Hurmatli hakamlar hay'ati! Bugun minglab ayollarimiz oilada tazyiq, kamsitish yoki iqtisodiy qaramlikka duch kelganda — qo‘rquv, andisha yoki qayerga borishni bilmaslik sababli yordam so‘rashga jur’at eta olmaydi. Afsuski, ko‘pincha ruhiy bosim jismoniy zo‘ravonlikka aylanmaguncha hech kim sezmaydi. 
+"Hurmatli hakamlar hay'ati! Bugun xotin-qizlar va qizlar nafaqat oilada, balki ko‘chada, taksida, ish/o‘qish joyida yoki internetda ham kutilmagan xavfga duch kelishmoqda: ta'qib qilish, taksida mashinadan tushirmaslik, shaxsiy suratlarni tarqatish bilan shantaj qilish yoki voyaga yetmaganlarni aldash. 
 
-O‘zbek tilida ayollarga vaziyatini anonim tarzda tahlil qilib beradigan va qonuniy yo‘l ko‘rsatadigan erta baholash vositasi yo‘q edi. Biz ushbu muammoga yechim sifatida **HimoyaAI** tizimini yaratdik."
+Aksariyat ayollar qo‘rquv, ayblanishdan xavotir yoki qayerga borishni bilmaslik tufayli sukut saqlashadi. O‘zbek tilida har qanday xavfli vaziyatni 100% anonim baholab, 'ayb sizda emas' degan dalda beruvchi va qonuniy yo‘l ko‘rsatuvchi vosita yo‘q edi. Biz ushbu muammoga yechim sifatida **HimoyaAI** tizimini yaratdik."
 
 ---
 
-## ⏱ 0:25 – 0:50 | 2-Qism: Yechim va Mahsulot Arxitekturasi (The Solution)
+## ⏱ 0:25 – 0:45 | 2-Qism: Yechim va Mahsulot Arxitekturasi (The Solution)
 
 **Spiker:**  
-"**HimoyaAI** — bu tazyiq ostidagi xotin-qizlar uchun 100% anonim, bepul va xolis dastlabki xavfsizlik baholash web-ilovasi hamda Telegram Mini App platformasidir.
-
-Bizning eng muhim printsipimiz — **Xavfsizlik va Maxfiylik**:
-1. **Zero-Log siyosati:** Tizimda ma'lumotlar bazasi mavjud emas. Xabarlar faqat operativ xotirada (RAM) turadi va sahifa yopilishi bilan o‘chib ketadi.
-2. **Kamuflaj himoyasi:** Brauzerda ilova 'Eslatmalar — Shaxsiy qaydlar' nomi bilan niqoblangan.
-3. **'Tezkor chiqish' (Panic Button):** Tugmani bosganda yoki klaviaturada **Esc** tugmasini ikki marta bosganda barcha xotira tozalanib, darhol Google sahifasiga o‘tadi."
+"**HimoyaAI** — bu xavfsiz bo‘lmagan har qanday vaziyatda ishlaydigan anonim veb-ilova va Telegram Mini App platformasidir:
+1. **Keng qamrov:** Oilada, ko‘chada, taksida va internetda — barcha vaziyatlarni qamrab oladi.
+2. **Zero-Log siyosati:** Ma'lumotlar bazasi yo‘q, matnlar faqat vaqtinchalik xotirada (RAM) saqlanadi.
+3. **Kamuflaj va Tezkor chiqish:** Vkladka 'Eslatmalar' deb niqoblangan, **Esc** tugmasini ikki marta bosganda barcha izlar o‘chib, Google ochiladi."
 
 ---
 
-## ⏱ 0:50 – 1:30 | 3-Qism: Jonli Namoyish (Live Demonstration)
+## ⏱ 0:45 – 1:30 | 3-Qism: Jonli Namoyish (Live Demonstration)
 
 *(Ekran orqali ilova interfeysi ko‘rsatiladi)*
 
-### 1-Holat: Sariq xavf darajasi (Ruhiy va iqtisodiy nazorat)
+### 1-Holat: Notanish shaxs tomonidan shantaj (Internet / Non-family)
 > **Kiritiladigan matn:**  
-> *"Erim oylik maoshim va plastik kartamni olib qo'ygan, onamnikiga borishga ruxsat bermaydi, telefonimni doim tekshiradi."*
+> *"Telegramda bir odam shaxsiy rasmlaringni internetda tarqataman deb 5 million so'm pul talab qilyapti, shantaj qilyapti."*  
+> *(Toifa: "Rasmlarimni tarqatish bilan qo'rqitish")*
 
 **Spiker:**  
-"Ko‘rib turganingizdek, tizim 48% — **O‘rta xavf (Yellow)** darajasini aniqladi. Ayolga hech qanday tajovuzkor bilan to‘qnash kelmaslik, dalillarni xavfsiz saqlash va eng muhimi — O‘zbekiston qonunchiligiga ko‘ra **30 kunlik bepul Himoya orderi** olish uchun mahalladagi 'Inson' markazi yoki 1146 ga murojaat qilish bo‘yicha aniq, sodda qadamlar berildi."
+"Ko‘rib turganingizdek, tizim 55% — **O‘rta xavf (Yellow)** darajasini berdi. Eng muhimi:
+- Tizim birinchi navbatda **'Ayb sizda emas'** deb ruhiy daldani beradi.
+- 'Pul to‘lamang, savdolashmang, skrinshotlarni dalil sifatida saqlang' degan aniq qadamlar va **1102 (IIV Kiberxavfsizlik markazi)** hamda bepul yuridik yordam kontaktlarini taqdim etadi.
+- Shuningdek, '102 ga qo‘ng‘iroq qilsam nima bo‘ladi?' tushuntirishi orqali ayoldagi politsiyadan qo‘rqish to‘sig‘ini yechadi."
 
-### 2-Holat: Qizil xavf darajasi (Deterministik xavfsizlik kafolati)
+### 2-Holat: Ko'chadagi / Taksidagi o'tkir xavf (Deterministik QIZIL xavfsizlik kafolati)
 > **Kiritiladigan matn:**  
-> *"Erim pichoq bilan o'ldiraman deb qo'rqityapti, eshikni qulflab qo'ydi, burnimni sindirdi."*
+> *"Taksi haydovchisi eshikni qulflab oldi, mashinadan tushirmayapti, boshqa yo'ldan ketyapti!"*
 
 **Spiker:**  
-"E'tibor bering: Bu yerda bizning **Deterministik xavfsizlik qatlamimiz** ishga tushdi. Sun'iy intellekt hech qachon xavfni kamaytira olmaydi. Zudlik bilan sahifaning eng yuqorisida **Qizil SOS bloki**, bir bosishda **102 va 1146** ga qo‘ng‘iroq qilish tugmalari hamda xavfsiz xonaga o‘tish bo‘yicha tezkor yo‘riqnoma paydo bo‘ldi."
+"Bu yerda bizning **Deterministik xavfsizlik qatlamimiz** ishga tushdi:
+- Mashinada ushlab turish xavfi aniqlanib, daraja qat'iy **QIZIL (86%)** ga ko‘tarildi.
+- Sahifaning eng yuqorisida **Qizil SOS bloki**, bir bosishda **102 va 1146** ga qo‘ng‘iroq tugmalari hamda haydovchi bilan tortishmay, gavjum joyda to‘xtatishni talab qilish bo‘yicha tezkor xavfsizlik yo‘riqnomasi chiqdi."
 
 ---
 
-## ⏱ 1:30 – 1:50 | 4-Qism: Telegram Mini App va Ekologik Birlashuv
+## ⏱ 1:30 – 1:50 | 4-Qism: Telegram Mini App va Bola Himoyasi
 
 **Spiker:**  
-"Telegram O‘zbekistonda birinchi raqamli messenjer. HimoyaAI platformasi Telegram Mini App sifatida ham birdek ishlaydi:
-- Hech narsa yuklab olinmaydi, telefon xotirasida iz qoldirmaydi.
-- Foydalanuvchi Telegram botimizga oddiy xabar yozganda ham, umumiy tahlil moduli orqali bir xil professional xulosani oladi."
+"HimoyaAI O‘zbekistondagi 25 milliondan ortiq Telegram foydalanuvchisi uchun qulay:
+- Telegram Mini App orqali telefonda hech qanday ilova o‘rnatilmaydi, xotirada iz qolmaydi.
+- Shuningdek, tizimimizda **'Bola uchun' maxsus yo‘nalish** mavjud: agar murojaatchi voyaga yetmagan qizaloq bo‘lsa yoki grooming xavfi sezilsa, so‘zlar soddalashadi va ishonchli katta insonga aytishga kuchli yo‘naltiriladi."
 
 ---
 
 ## ⏱ 1:50 – 2:00 | 5-Qism: Ijtimoiy Ta'sir va Xulosa (Social Impact)
 
 **Spiker:**  
-"HimoyaAI har bir qiz va ayolga xavfni erta anglash, o‘z huquqlarini bilish va o‘z vaqtida davlat himoyasiga ega bo‘lish imkonini beradi. 
+"HimoyaAI qizlar va ayollarga har qanday xavf qarshisida sarosimaga tushmaslik, o‘zini ayblamaslik va o‘z vaqtida professional davlat yordamiga ulanish imkonini beradi.
 
 **Bizning shiorimiz:** Siz yolg‘iz emassiz — xavfsizligingiz o‘z qo‘lingizda.  
 E'tiboringiz uchun rahmat!"

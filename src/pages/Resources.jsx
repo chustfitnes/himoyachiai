@@ -9,8 +9,8 @@ export default function Resources() {
         <h1 className="text-2xl sm:text-3xl font-serif font-bold text-ink-primary-light dark:text-ink-primary-dark tracking-tight">
           Yordam resurslari va tashkilotlar
         </h1>
-        <p className="text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-1 font-sans">
-          O‘zbekistonda tazyiq va zo‘ravonlikka uchragan ayollarni himoya qiluvchi rasmiy davlat va nodavlat xizmatlari.
+        <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-1 font-sans">
+          Oilada, ko‘chada, taksida yoki internetda tazyiqqa uchraganda murojaat qilish mumkin bo‘lgan rasmiy davlat va nodavlat xizmatlari.
         </p>
       </div>
 
@@ -18,6 +18,7 @@ export default function Resources() {
       <div className="space-y-4">
         <ContactCard contactKey="hotline_1146" />
         <ContactCard contactKey="police_102" />
+        <ContactCard contactKey="cyber_102" />
         <ContactCard contactKey="inson_center" />
         <ContactCard contactKey="legal" />
         <ContactCard contactKey="psychologist" />
@@ -33,7 +34,7 @@ export default function Resources() {
         </div>
 
         <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed mb-4">
-          O‘zbekiston Respublikasining "Xotin-qizlarni tazyiq va zo‘ravonlikdan himoya qilish to‘g‘risida"gi qonuniga binoan, har bir ayol davlatdan bepul Himoya orderi olish huquqiga ega.
+          O‘zbekiston Respublikasining "Xotin-qizlarni tazyiq va zo‘ravonlikdan himoya qilish to‘g‘risida"gi qonuniga binoan, har bir ayol va qiz davlatdan bepul Himoya orderi olish huquqiga ega.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 border-t border-brand-200/60 dark:border-brand-800/60 text-xs sm:text-sm">
@@ -63,7 +64,7 @@ export default function Resources() {
               Nimalarni cheklaydi?
             </span>
             <p className="text-ink-secondary-light dark:text-ink-secondary-dark text-xs">
-              Tajovuzkorning yaqinlashishi, qo‘ng‘iroq qilishi, xabar yozishi va tahdid qilishi qat’iy taqiqlanadi. Buzilsa — jazo qo‘llaniladi.
+              Tajovuzkorning yaqinlashishi, qo‘ng‘iroq qilishi, xabar yozishi va tahdid qilishi qat’iy taqiqlanadi. Buzilsa — qonuniy jazo qo‘llaniladi.
             </p>
           </div>
         </div>

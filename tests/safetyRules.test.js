@@ -1,6 +1,7 @@
 /**
  * Automated Safety Rule Verification Test Suite
- * Tests deterministic safety layer on 15 real-world Uzbek scenarios (5 per level: Red, Yellow, Green)
+ * Tests deterministic safety layer on 30 real-world Uzbek scenarios (10 per level: Red, Yellow, Green)
+ * Covers both domestic situations AND stranger, taxi, stalking, photo blackmail, child grooming, and online threats.
  */
 
 import assert from 'node:assert';
@@ -8,6 +9,7 @@ import { evaluateSafetyRules } from '../lib/safetyRules/index.js';
 
 const testCases = {
   red: [
+    // Original 5 domestic cases
     {
       id: 'red_1',
       text: "Erim pichoq olib o'ldiraman deb qo'rqityapti, eshikni qulflab qo'ydi",
@@ -43,9 +45,47 @@ const testCases = {
       expectedFloor: 'red',
       description: "Qurol bilan hayotga tahdid",
     },
+
+    // NEW 5 cases: Stranger, taxi, forced contact, child grooming, place/time threat
+    {
+      id: 'red_6_new_taxi',
+      text: "Taksi haydovchisi mashinadan tushirmayapti, eshikni qulflab oldi, boshqa yo'ldan ketyapti",
+      chips: ["Taksi yoki yo'lda bezovta qilish"],
+      expectedFloor: 'red',
+      description: "Taksi haydovchisi eshikni qulflab, mashinadan tushirmayapti",
+    },
+    {
+      id: 'red_7_new_forced_contact',
+      text: "Notanish erkak ko'chada qo'limdan mahkam ushlab, tortingilab kiyimimni yirtmoqchi bo'ldi",
+      chips: [],
+      expectedFloor: 'red',
+      description: "Jismoniy ushlab olish va majburlash harakati",
+    },
+    {
+      id: 'red_8_new_child_grooming',
+      text: "Internetda bir amaki 14 yoshli singlimga rasmingni yubor, hech kimga aytma deb uchrashuvga chaqiryapti",
+      chips: ["Bolani yoki qizchani aldash, yo'ldan ozdirish"],
+      expectedFloor: 'red',
+      description: "Voyaga yetmagan bolaga nisbatan sirli yaqinlashuv va grooming",
+    },
+    {
+      id: 'red_9_new_place_time_threat',
+      text: "Har kuni ko'chada kutaman, ertaga kelaman deb ishxonam oldida poylab turibdi",
+      chips: ["Orqamdan ergashish, kuzatish"],
+      expectedFloor: 'red',
+      description: "Aniq vaqt va joy aytilgan ta'qib tahdidi",
+    },
+    {
+      id: 'red_10_new_blackmail_harm',
+      text: "Rasmlaringni internetga tarqataman deb pul talab qilyapti, bermasang uyingga borib o'ldiraman dedi",
+      chips: ["Rasmlarimni tarqatish bilan qo'rqitish (pul yoki boshqa narsa talab qilish)"],
+      expectedFloor: 'red',
+      description: "Surat tarqatish shantaji bilan birga hayotga o'ldirish tahdidi",
+    },
   ],
 
   yellow: [
+    // Original 5 domestic cases
     {
       id: 'yellow_1',
       text: "Erim oylik maoshim va plastik kartamni olib qo'ygan, bir tiyin ham bermaydi",
@@ -81,9 +121,47 @@ const testCases = {
       expectedFloor: 'yellow',
       description: "Hujjatlarni olib qo'yish va ajrashish bilan qo'rqitish",
     },
+
+    // NEW 5 cases: Stalking, sextortion, workplace harassment, online threats
+    {
+      id: 'yellow_6_new_stalking',
+      text: "Bir notanish odam har kuni metro bekatidan uyimgacha orqamdan ergashadi va kuzatib yuradi",
+      chips: ["Orqamdan ergashish, kuzatish"],
+      expectedFloor: 'yellow',
+      description: "Ko'chada orqadan ergashish va kuzatib yurish",
+    },
+    {
+      id: 'yellow_7_new_sextortion',
+      text: "Eski tanishim shaxsiy rasmlaringni internetda tarqataman deb 5 million so'm pul talab qilyapti",
+      chips: ["Rasmlarimni tarqatish bilan qo'rqitish (pul yoki boshqa narsa talab qilish)"],
+      expectedFloor: 'yellow',
+      description: "Shaxsiy suratlarni tarqatish tahdidi bilan pul talab qilish",
+    },
+    {
+      id: 'yellow_8_new_workplace',
+      text: "Ish joyimda boshliq menga noo'rin bosim o'tkazmoqda, rozi bo'lmasang ishdan bo'shataman deb qo'rqityapti",
+      chips: ["Ish yoki o'qish joyida bosim va bezovta qilish"],
+      expectedFloor: 'yellow',
+      description: "Ishxonada boshliq tomonidan nojo'ya bosim",
+    },
+    {
+      id: 'yellow_9_new_online_threat',
+      text: "Telegramda begona profildan haqorat qilib, yozishmalarni tarqataman deb ruhiy bosim o'tkazmoqda",
+      chips: ["Internetda tahdid yoki shantaj"],
+      expectedFloor: 'yellow',
+      description: "Ijtimoiy tarmoqda anonim profil orqali bosim va haqorat",
+    },
+    {
+      id: 'yellow_10_new_taxi_verbal',
+      text: "Taksida haydovchi behayo gaplar gapirib, telefon raqamimni so'rab noo'rin bezovta qildi",
+      chips: ["Taksi yoki yo'lda bezovta qilish"],
+      expectedFloor: 'yellow',
+      description: "Taksida og'zaki noo'rin bezovta qilish holati",
+    },
   ],
 
   green: [
+    // Original 5 domestic cases
     {
       id: 'green_1',
       text: "Turmush o'rtog'im bilan oxirgi paytlarda kelisholmay qolyapmiz, juda charchaganman va tushunmovchiliklar ko'p",
@@ -119,16 +197,53 @@ const testCases = {
       expectedFloor: 'green',
       description: "Hissiy sovuqlashish, shaxsiy chegaralar ehtiyoji",
     },
+
+    // NEW 5 cases: Benign non-violent queries in study, work, transport, chat
+    {
+      id: 'green_6_new_chat',
+      text: "Telegram guruhida bir foydalanuvchi bilan fikrimiz to'g'ri kelmadi, xafa bo'lib guruhdan chiqib ketdim",
+      chips: ['Boshqa'],
+      expectedFloor: 'green',
+      description: "Guruhda oddiy fikr qarama-qarshiligi",
+    },
+    {
+      id: 'green_7_new_bus',
+      text: "Avtobusda yo'l haqini to'lashda konduktor bilan tushunmovchilik bo'ldi, biroz asabiylashdim",
+      chips: [],
+      expectedFloor: 'green',
+      description: "Jamoat transportidagi oddiy ro'zg'or tushunmovchiligi",
+    },
+    {
+      id: 'green_8_new_study',
+      text: "Institutda sessiya payti imtihonlardan juda qattiq charchadim va stress holatidaman",
+      chips: [],
+      expectedFloor: 'green',
+      description: "O'qishdagi imtihon stressi va toliqish",
+    },
+    {
+      id: 'green_9_new_colleague',
+      text: "Hamkasbim bilan yangi loyiha bo'yicha bahslashib qoldik, munosabatlarimiz biroz sovuqlashdi",
+      chips: [],
+      expectedFloor: 'green',
+      description: "Hamkasb bilan ish jarayonidagi oddiy fikr almashinuvi",
+    },
+    {
+      id: 'green_10_new_boundary',
+      text: "Yangi tanishgan odamim juda ko'p xabar yozyapti, tez-tez gaplashishga vaqtim yo'q, xushmuomalalik bilan tushuntirmoqchiman",
+      chips: [],
+      expectedFloor: 'green',
+      description: "Yangi tanishuvda shaxsiy chegaralarni belgilash",
+    },
   ],
 };
 
-console.log('🧪 Starting HimoyaAI Deterministic Safety Rule Tests...\n');
+console.log('🧪 Starting HimoyaAI Extended Safety Rule Tests (30 total cases)...\n');
 
 let passed = 0;
 let failed = 0;
 
 ['red', 'yellow', 'green'].forEach((level) => {
-  console.log(`--- Testing Level: ${level.toUpperCase()} (5 cases) ---`);
+  console.log(`--- Testing Level: ${level.toUpperCase()} (10 cases) ---`);
   testCases[level].forEach((tc, idx) => {
     const res = evaluateSafetyRules(tc.text, tc.chips);
     try {
@@ -155,10 +270,10 @@ let failed = 0;
         assert.ok(res.hasRedFlags === false, `Green must not have red flags`);
       }
 
-      console.log(`  ✓ [${idx + 1}/5] PASS: ${tc.description} -> ${res.floorLevel.toUpperCase()} (${res.minRiskPercent}%)`);
+      console.log(`  ✓ [${idx + 1}/10] PASS: ${tc.description} -> ${res.floorLevel.toUpperCase()} (${res.minRiskPercent}%)`);
       passed++;
     } catch (err) {
-      console.error(`  ✗ [${idx + 1}/5] FAIL: ${tc.description}`);
+      console.error(`  ✗ [${idx + 1}/10] FAIL: ${tc.description}`);
       console.error(`    ${err.message}`);
       failed++;
     }
@@ -173,5 +288,5 @@ console.log(`=================================`);
 if (failed > 0) {
   process.exit(1);
 } else {
-  console.log('✅ All deterministic safety rule tests succeeded without errors!');
+  console.log('✅ All 30 deterministic safety rule tests succeeded without errors!');
 }
