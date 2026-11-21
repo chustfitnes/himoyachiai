@@ -17,10 +17,11 @@ Aksariyat ayollar qo‘rquv, ayblanishdan xavotir yoki qayerga borishni bilmasli
 ## ⏱ 0:25 – 0:45 | 2-Qism: Yechim va Mahsulot Arxitekturasi (The Solution)
 
 **Spiker:**  
-"**HimoyaAI** — bu xavfsiz bo‘lmagan har qanday vaziyatda ishlaydigan anonim veb-ilova va Telegram Mini App platformasidir:
+"**HimoyaAI** — bu xavfsiz bo‘lmagan har qanday vaziyatda ishlaydigan, xalqaro andozalarga (UN Women va Jahon Travmaga sezgir xavfsizlik standartlari) mos platformadir:
 1. **Keng qamrov:** Oilada, ko‘chada, taksida va internetda — barcha vaziyatlarni qamrab oladi.
-2. **Zero-Log siyosati:** Ma'lumotlar bazasi yo‘q, matnlar faqat vaqtinchalik xotirada (RAM) saqlanadi.
-3. **Kamuflaj va Tezkor chiqish:** Vkladka 'Eslatmalar' deb niqoblangan, **Esc** tugmasini ikki marta bosganda barcha izlar o‘chib, Google ochiladi."
+2. **Zero-Log & Vizual Niqob (Stealth Mode):** Ma'lumotlar bazasi yo‘q (RAM-only). Agar begona odam yaqinlashsa, birgina 'Niqob' tugmasi bilan butun ekran darhol pazandalik va taom retseptlari portaliga aylanadi!
+3. **Interaktiv Xavfsizlik Rejasi (Safety Plan):** Xavfsiz go-bag sumkasi, yaqinlar bilan maxfiy kod so'z va favqulodda chiqish rejasini shakllantiradi.
+4. **Tezkor GPS SOS va Ovozli Ko'mak:** Bir bosishda yaqinlarga jonli GPS koordinata bilan SOS SMS/Telegram jo'natish hamda xulosani ovozli eshitish imkoniyati mavjud."
 
 ---
 

@@ -1,0 +1,66 @@
+{
+  "lang": "uz-lat",
+  "disclaimer": "HimoyaAI — yuridik yoki psixologik yakuniy tashxis emas, balki vaziyatni xolis baholash va yo‘naltirish vositasidir. Favqulodda xavf ostida bo‘lsangiz, darhol 102 yoki 1146 ga qo‘ng‘iroq qiling.",
+  "levels": {
+    "green": {
+      "level": "green",
+      "title": "Past xavf darajasi — Hissiy tiklanish va tinchlanish",
+      "summary": "Keltirilgan ma’lumotlarda to‘g‘ridan-to‘g‘ri jismoniy zo‘ravonlik yoki xavf belgilari aniqlanmadi. Biroq har qanday ruhiy tushkunlik, charchoq yoki nizolar e’tiborga loyiq.",
+      "validation": "Sizning his-tuyg‘ularingiz muhim va tushunarli. Har qanday inson og‘ir kunlarda ruhiy zo‘riqish yoki charchoqni his qilishi mutlaqo tabiiydir.",
+      "steps": [
+        {
+          "name": "4-7-8 Tinchlantiruvchi nafas mashqi",
+          "desc": "Burun orqali 4 soniya sekin nafas oling, nafasni 7 soniya ushlab turing va og‘iz orqali 8 soniya davomida sekin chiqaring. Buni 4 marta takrorlang."
+        },
+        {
+          "name": "5-4-3-2-1 Grounding (Atrofga e’tibor) usuli",
+          "desc": "Ko‘zingiz bilan ko‘rib turgan 5 ta narsani, teginishingiz mumkin bo‘lgan 4 ta jismni, eshitayotgan 3 ta tovushni, 2 ta hidni va 1 ta ijobiy xususiyatingizni ayting."
+        },
+        {
+          "name": "Hissiyotlar kundaligi",
+          "desc": "Sizni bezovta qilayotgan vaziyat va hissiyotlarni qog‘ozga erkin yozing. Bu fikrlarni tartibga solishga yordam beradi."
+        }
+      ],
+      "when_to_seek_help": "Agar tushkunlik, uyqusizlik yoki bezovtalik 2 haftadan ortiq davom etsa, mutaxassis psixologga murojaat qilish tavsiya etiladi.",
+      "escalation_bridge": "Agar vaziyat o‘zgarib, sizga nisbatan bosim, tahdid yoki cheklovlar boshlansa, bu sahifaga qayting yoki 1146 ga qo‘ng‘iroq qiling."
+    },
+    "yellow": {
+      "level": "yellow",
+      "title": "O‘rta xavf darajasi — Ruhiy/iqtisodiy bosim va himoya choralari",
+      "summary": "Vaziyatda ruhiy tazyiq, muntazam nazorat, moddiy cheklovlar yoki qo‘rqitish belgilari mavjud. Bu sog‘lom munosabat emas va e’tiborsiz qoldirilmasligi kerak.",
+      "pressure_types": [
+        "Ruhiy tazyiq: haqorat, qadrsizlantirish, aybdorlik hissini uyg‘otish",
+        "Iqtisodiy qaramlik: pul bermaslik, ishlashga to‘sqinlik qilish, xarajatlarni to‘liq nazorat qilish",
+        "Ijtimoiy izolyatsiya: yaqinlar, ota-ona yoki dugonalar bilan aloqani taqiqlash",
+        "Raqamli nazorat: telefon, yozishmalar va parollarni tekshirish"
+      ],
+      "steps": [
+        {
+          "name": "Dalillarni xavfsiz saqlash",
+          "desc": "Tahdidli xabarlar, skrinshotlar, audio yozuvlar va sana/vaqtlarni o‘zingiz uchun xavfsiz Telegram maxfiy xabarida yoki ishonchli dugonangizda saqlang."
+        },
+        {
+          "name": "Himoya orderi olish tartibi (O‘zbekiston Qonunchiligi)",
+          "desc": "Tazyiq va zo‘ravonlikka uchragan xotin-qizlar uchun hududiy profilaktika inspektori tomonidan 24 soat ichida 30 kun muddatga Himoya Orderi beriladi (muddati 60 kungacha uzaytirilishi mumkin). Himoya orderi berilganda zo‘ravonga sizga yaqinlashish va aloqaga chiqish qat’iyan taqiqlanadi."
+        },
+        {
+          "name": "Yordam resurslari",
+          "desc": "«Madad» NNT (bepul yuridik yordam) va eng yaqin «Inson» ijtimoiy xizmatlar markaziga murojaat qilish."
+        }
+      ]
+    },
+    "red": {
+      "level": "red",
+      "title": "Yuqori xavf darajasi — Zudlik bilan xavfsizlik va favqulodda yordam",
+      "summary": "DIQQAT: Jismoniy zo‘ravonlik, hayotga tahdid, qurol yoki o‘ta xavfli tajovuz belgilari aniqlandi. Zudlik bilan xavfsizlik choralarini ko‘ring!",
+      "immediate_actions": [
+        "1. Zudlik bilan xavfsiz joyga o‘ting: xonani ichidan qulflang, ko‘chaga chiqing yoki qo‘shnilar huzuriga boring.",
+        "2. Favqulodda qo‘ng‘iroq: Darhol 102 (Ichki ishlar) yoki 1146 (Milliy ishonch telefoni) ga qo‘ng‘iroq qiling.",
+        "3. Ishonchli odamingizga xabar bering va hozirgi geolokatsiyangizni yuboring.",
+        "4. Yaqin atrofdagi Ayollarni reabilitatsiya qilish markazi (Shelter) yoki «Inson» markazidan boshpana so‘rang."
+      ],
+      "suicide_crisis_protocol": "Agar o‘zingizga jarohat yetkazish yoki yashashni istamaslik xayollari kelayotgan bo‘lsa: Siz yolg‘iz emassiz. Bu azob vaqtinchalik va siz bu og‘ir holatdan chiqa olasiz. Iltimos, darhol 1146 yoki 102 ga qo‘ng‘iroq qiling, mutaxassislar sizni tinglashga va asrashga tayyor.",
+      "child_protocol": "Agar sen bola yoki o‘smir bo‘lsang: Seni hech kim urishga, haqorat qilishga yoki noqulay teginishga haqi yo‘q. Bu sening aybing emas! Darhol ishonchli o‘qituvchingga, qarindoshingga ayt yoki 1050 / 102 ga qo‘ng‘iroq qil."
+    }
+  }
+}

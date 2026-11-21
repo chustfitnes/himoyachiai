@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - NO_LOG_MODE=true
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    depends_on:
+      - backend
+    restart: unless-stopped

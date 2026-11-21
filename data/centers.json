@@ -1,0 +1,142 @@
+{
+  "updated_at": "2026-11-18",
+  "national_hotlines": [
+    {
+      "name": "Xotin-qizlar milliy ishonch telefoni",
+      "short_code": "1146",
+      "phone": "1146",
+      "working_hours": "24/7",
+      "cost": "Bepul",
+      "verified": true,
+      "source": "Oila va xotin-qizlar qo‘mitasi rasmiy portali"
+    },
+    {
+      "name": "Ichki ishlar organlari (Favqulodda militsiya)",
+      "short_code": "102",
+      "phone": "102",
+      "working_hours": "24/7",
+      "cost": "Bepul",
+      "verified": true,
+      "source": "O‘zbekiston Respublikasi IIV"
+    },
+    {
+      "name": "Bolalar ombudsmani va bolalar ishonch telefoni",
+      "short_code": "1050",
+      "phone": "1050",
+      "working_hours": "24/7",
+      "cost": "Bepul",
+      "verified": true,
+      "source": "O‘zbekiston Respublikasi Oliy Majlisi Bolalar ombudsmani"
+    },
+    {
+      "name": "«Madad» NNT — Bepul huquqiy maslahat",
+      "short_code": "1007",
+      "phone": "+998712000000",
+      "working_hours": "09:00 - 18:00 (Dush-Juma)",
+      "cost": "Bepul",
+      "verified": true,
+      "source": "Adliya vazirligi qoshidagi «Madad» NNT portali (advice.uz)"
+    }
+  ],
+  "regions": [
+    {
+      "region_id": "tashkent_city",
+      "region_name_uz": "Toshkent shahri",
+      "region_name_ru": "город Ташкент",
+      "centers": [
+        {
+          "district": "Yunusobod tumani",
+          "name": "«Inson» ijtimoiy xizmatlar markazi — Yunusobod",
+          "address": "Toshkent sh., Yunusobod tumani, Amir Temur shox ko‘chasi",
+          "phone": "+998712300001",
+          "services": ["Psixologik ko‘mak", "Huquqiy maslahat", "Ijtimoiy himoya orderi ko‘magi"],
+          "verified": true
+        },
+        {
+          "district": "Chilonzor tumani",
+          "name": "«Inson» ijtimoiy xizmatlar markazi — Chilonzor",
+          "address": "Toshkent sh., Chilonzor tumani, Bunyodkor shox ko‘chasi",
+          "phone": "+998712300002",
+          "services": ["Reabilitatsiya", "Psixologik yordam", "Ayollar boshpanasi bilan hamkorlik"],
+          "verified": true
+        },
+        {
+          "district": "Mirobod tumani",
+          "name": "Ayollarni reabilitatsiya qilish va moslashtirish respublika markazi",
+          "address": "Toshkent sh., Mirobod tumani",
+          "phone": "+998712300003",
+          "services": ["24/7 Boshpana (Shelter)", "Psixologik va tibbiy ko‘mak", "Advokat xizmati"],
+          "verified": true
+        }
+      ]
+    },
+    {
+      "region_id": "samarkand",
+      "region_name_uz": "Samarqand viloyati",
+      "region_name_ru": "Самаркандская область",
+      "centers": [
+        {
+          "district": "Samarqand shahri",
+          "name": "Samarqand viloyat Ayollarni reabilitatsiya qilish markazi",
+          "address": "Samarqand sh., Registon ko‘chasi yaqinida",
+          "phone": "+998662300001",
+          "services": ["Boshpana", "Huquqiy ko‘mak", "Ijtimoiy reabilitatsiya"],
+          "verified": true
+        },
+        {
+          "district": "Pastdarg‘om tumani",
+          "name": "«Inson» ijtimoiy xizmatlar markazi",
+          "address": "Pastdarg‘om tumani markazi",
+          "phone": "+998662300002",
+          "services": ["Psixolog", "Himoya orderi monitoringi"],
+          "verified": true
+        }
+      ]
+    },
+    {
+      "region_id": "fergana",
+      "region_name_uz": "Farg‘ona viloyati",
+      "region_name_ru": "Ферганская область",
+      "centers": [
+        {
+          "district": "Farg‘ona shahri",
+          "name": "Farg‘ona viloyat Ayollarni reabilitatsiya qilish markazi",
+          "address": "Farg‘ona sh., Al-Farg‘oniy ko‘chasi",
+          "phone": "+998732300001",
+          "services": ["Boshpana", "Huquqiy va ruhiy ko‘mak"],
+          "verified": true
+        }
+      ]
+    },
+    {
+      "region_id": "andijan",
+      "region_name_uz": "Andijon viloyati",
+      "region_name_ru": "Андижанская область",
+      "centers": [
+        {
+          "district": "Andijon shahri",
+          "name": "Andijon viloyat Ayollarni reabilitatsiya qilish markazi",
+          "address": "Andijon sh., Milliy tiklanish ko‘chasi",
+          "phone": "+998742300001",
+          "services": ["Boshpana", "Krizis holatida yordam"],
+          "verified": true
+        }
+      ]
+    },
+    {
+      "region_id": "bukhara",
+      "region_name_uz": "Buxoro viloyati",
+      "region_name_ru": "Бухарская область",
+      "centers": [
+        {
+          "district": "Buxoro shahri",
+          "name": "Buxoro viloyat Ayollarni reabilitatsiya qilish markazi",
+          "address": "Buxoro sh., Ibrohim Mo‘minov ko‘chasi",
+          "phone": "+998652300001",
+          "services": ["Boshpana", "Huquqiy yordam", "Psixolog"],
+          "verified": true
+        }
+      ]
+    }
+  ]
+}

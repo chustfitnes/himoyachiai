@@ -4,12 +4,13 @@
   "description": "HimoyaAI - O'zbekiston xotin-qizlari uchun anonim xavfsizlik baholash va yo'naltirish tizimi",
   "type": "module",
   "scripts": {
+    "start": "node server/index.js",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
     "bot": "node bot/index.js",
-    "test": "node tests/safetyRules.test.js"
+    "test": "node tests/safetyRules.test.js && node tests/promptSanitizer.test.js && node tests/analysisEngine.test.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

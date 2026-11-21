@@ -4,39 +4,38 @@ import { ShieldAlert, AlertTriangle, ShieldCheck } from 'lucide-react';
 export default function RiskIndicator({ percent = 0, level = 'green' }) {
   const safePercent = Math.min(100, Math.max(0, percent));
 
-  // Determine styling, icon, and semantic label
   let config = {
-    label: "Past xavf darajasi",
-    subtitle: "Hissiy zo'riqish yoki tushunmovchilik, bevosita tahdid aniqlanmadi",
+    label: "Past Xavf Darajasi",
+    subtitle: "Hissiy zo‘riqish yoki tushunmovchilik, bevosita jismoniy tahdid aniqlanmadi",
     icon: ShieldCheck,
-    colorClass: "text-emerald-700 dark:text-emerald-300",
-    bgClass: "bg-emerald-50 dark:bg-emerald-950/40",
-    borderClass: "border-emerald-200 dark:border-emerald-800",
-    barColor: "#10B981",
-    barBg: "#D1FAE5",
+    colorClass: "text-emerald-700",
+    bgClass: "bg-emerald-50/70",
+    borderClass: "border-emerald-200",
+    badgeClass: "badge-status-green",
+    barColor: "#059669",
   };
 
   if (level === 'red') {
     config = {
-      label: "Yuqori xavf darajasi (Shoshilinch)",
-      subtitle: "Jismoniy xavf yoki hayotga tahdid belgilari mavjud",
+      label: "Yuqori Xavf Darajasi (Shoshilinch)",
+      subtitle: "Jismoniy xavf yoki hayotga bevosita tajovuz belgilari aniqlandi",
       icon: ShieldAlert,
-      colorClass: "text-red-700 dark:text-red-300",
-      bgClass: "bg-red-50 dark:bg-red-950/40",
-      borderClass: "border-red-200 dark:border-red-800",
-      barColor: "#EF4444",
-      barBg: "#FEE2E2",
+      colorClass: "text-rose-700",
+      bgClass: "bg-rose-50/70",
+      borderClass: "border-rose-200",
+      badgeClass: "badge-status-red",
+      barColor: "#E11D48",
     };
   } else if (level === 'yellow') {
     config = {
-      label: "O'rta xavf darajasi",
-      subtitle: "Ruhiy bosim, moliyaviy yoki aloqa nazorati alomatlari",
+      label: "O‘rta Xavf Darajasi",
+      subtitle: "Ruhiy bosim, moliyaviy yoki aloqa nazorati (tazyiq) alomatlari",
       icon: AlertTriangle,
-      colorClass: "text-amber-800 dark:text-amber-300",
-      bgClass: "bg-amber-50 dark:bg-amber-950/40",
-      borderClass: "border-amber-200 dark:border-amber-800",
-      barColor: "#F59E0B",
-      barBg: "#FEF3C7",
+      colorClass: "text-amber-800",
+      bgClass: "bg-amber-50/70",
+      borderClass: "border-amber-200",
+      badgeClass: "badge-status-yellow",
+      barColor: "#D97706",
     };
   }
 
@@ -44,18 +43,18 @@ export default function RiskIndicator({ percent = 0, level = 'green' }) {
 
   // SVG circular calculation
   const size = 110;
-  const strokeWidth = 9;
+  const strokeWidth = 8;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (safePercent / 100) * circumference;
 
   return (
     <div
-      className={`p-5 sm:p-6 rounded-2xl border ${config.bgClass} ${config.borderClass} transition-colors`}
+      className={`p-6 rounded-2xl border ${config.bgClass} ${config.borderClass} transition-all shadow-xs`}
       role="status"
       aria-live="polite"
     >
-      <div className="flex flex-col sm:flex-row items-center gap-5 sm:gap-6">
+      <div className="flex flex-col sm:flex-row items-center gap-6">
         {/* Circular Progress Gauge */}
         <div className="relative shrink-0 flex items-center justify-center">
           <svg width={size} height={size} className="transform -rotate-90">
@@ -64,9 +63,8 @@ export default function RiskIndicator({ percent = 0, level = 'green' }) {
               cx={size / 2}
               cy={size / 2}
               r={radius}
-              stroke="currentColor"
+              stroke="#E2E8F0"
               strokeWidth={strokeWidth}
-              className="text-black/10 dark:text-white/10"
               fill="transparent"
             />
             {/* Value ring */}
@@ -80,32 +78,32 @@ export default function RiskIndicator({ percent = 0, level = 'green' }) {
               strokeDashoffset={offset}
               strokeLinecap="round"
               fill="transparent"
-              className="transition-all duration-700 ease-out"
+              className="transition-all duration-1000 ease-out"
             />
           </svg>
 
           {/* Centered Percentage Display */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span className={`text-2xl sm:text-3xl font-serif font-bold ${config.colorClass}`}>
+            <span className={`text-2xl sm:text-3xl font-heading font-extrabold ${config.colorClass}`}>
               {safePercent}%
             </span>
-            <span className="text-[10px] uppercase font-sans tracking-wider text-ink-muted-light dark:text-ink-muted-dark">
+            <span className="text-[10px] uppercase font-mono tracking-wider text-slate-500">
               Xavf
             </span>
           </div>
         </div>
 
-        {/* Level Details (Accessibility: Color + Icon + Text together) */}
-        <div className="flex-1 text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-md text-xs font-semibold mb-2 bg-white/70 dark:bg-black/30 border border-black/5 dark:border-white/10">
-            <IconComponent className={`w-4 h-4 ${config.colorClass}`} aria-hidden="true" />
-            <span className={config.colorClass}>{config.label}</span>
+        {/* Level Details */}
+        <div className="flex-1 text-center sm:text-left space-y-1.5">
+          <div className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-heading font-bold border ${config.badgeClass}`}>
+            <IconComponent className="w-3.5 h-3.5" aria-hidden="true" />
+            <span>{config.label}</span>
           </div>
-          <p className="text-sm sm:text-base text-ink-primary-light dark:text-ink-primary-dark font-medium leading-snug">
+          <p className="text-sm sm:text-base text-slate-900 font-heading font-bold leading-snug">
             {config.subtitle}
           </p>
-          <p className="text-xs text-ink-secondary-light dark:text-ink-secondary-dark mt-1">
-            Avtomatik dastlabki baholash &bull; Mutaxassis ko‘rigi o‘rnini bosmaydi
+          <p className="text-xs text-slate-500 font-sans">
+            Tizim xulosasi deterministik xavfsizlik filtrlari va O‘zR qonunchiligi asosida xolis shakllantirildi.
           </p>
         </div>
       </div>

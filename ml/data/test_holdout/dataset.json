@@ -1,0 +1,722 @@
+[
+  {
+    "text": "Juda telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan.",
+    "label": "yellow"
+  },
+  {
+    "text": "Juda бошимни ёриб, қонга белади, уйга қулфлаб қўйди, чиқолмаяпман.",
+    "label": "red"
+  },
+  {
+    "text": "Telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Yana он читает все мои переписки в telegram, запрещает общаться с мамой и подругами.",
+    "label": "yellow"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. nima qilishni bilmayapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Kecha qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Juda qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Қайнонам ҳар куни ҳақорат қилади, руҳий босим ўтказади. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Juda qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж полностью контролирует мои финансы и не дает денег даже на базовые вещи. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Kecha boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman.",
+    "label": "red"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman. qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Қайнонам ҳар куни ҳақорат қилади, руҳий босим ўтказади. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi.",
+    "label": "red"
+  },
+  {
+    "text": "Telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Муж полностью контролирует мои финансы и не дает денег даже на базовые вещи. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Телефонимни текширади, қариндошларим билан кўришишга рухсат бермайди. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Телефонимни текширади, қариндошларим билан кўришишга рухсат бермайди. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию. yordam bering.",
+    "label": "red"
+  },
+  {
+    "text": "Doim он читает все мои переписки в telegram, запрещает общаться с мамой и подругами.",
+    "label": "yellow"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. nima qilishni bilmayapman.",
+    "label": "red"
+  },
+  {
+    "text": "Kecha telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Эрим пулимни олиб қўяди, маошимни ўзимга ишлатишга рухсат бермайди. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж полностью контролирует мои финансы и не дает денег даже на базовые вещи. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Nafasim qisilib ketguncha bo'ynimdan bo'g'di, hushimdan ketib qolishimga oz qoldi. qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Yana telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! nima qilishni bilmayapman.",
+    "label": "red"
+  },
+  {
+    "text": "Қайнонам ҳар куни ҳақорат қилади, руҳий босим ўтказади. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim эрим пулимни олиб қўяди, маошимни ўзимга ишлатишга рухсат бермайди.",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! iltimos maslahat bering.",
+    "label": "red"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Он читает все мои переписки в Telegram, запрещает общаться с мамой и подругами. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Juda qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Yana эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг!",
+    "label": "red"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Bugun juda charchadim, uy yumushlari va ishdan keyin hech narsaga kuchim qolmadi. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию. iltimos maslahat bering.",
+    "label": "red"
+  },
+  {
+    "text": "Турмуш ўртоғим билан маиший масалаларда бироз тортишиб қолдик, лекин ҳал бўлди. qo'rqyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Hozir erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi!",
+    "label": "red"
+  },
+  {
+    "text": "Очень устала на работе, эмоциональное выгорание и нет сил готовить ужин. iltimos maslahat bering.",
+    "label": "green"
+  },
+  {
+    "text": "Ishda stress ko'p, doimiy asabiylik bor, dam olishga ehtiyojim bor. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Kecha telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Bugun juda charchadim, uy yumushlari va ishdan keyin hech narsaga kuchim qolmadi. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Bugun очень устала на работе, эмоциональное выгорание и нет сил готовить ужин.",
+    "label": "green"
+  },
+  {
+    "text": "Meni va bolamni kaltaklab ko'chaga haydab yubordi, qorong'uda qayerga borishni bilmayapman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. qo'rqyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Yana kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Turmush o'rtog'im bilan maoshimizni qanday taqsimlash haqida biroz tortishib qoldik. iltimos maslahat bering.",
+    "label": "green"
+  },
+  {
+    "text": "Kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q. nima qilishni bilmayapman.",
+    "label": "green"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Turmush o'rtog'im bilan maoshimizni qanday taqsimlash haqida biroz tortishib qoldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Турмуш ўртоғим билан маиший масалаларда бироз тортишиб қолдик, лекин ҳал бўлди. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Kecha telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Yana бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади.",
+    "label": "green"
+  },
+  {
+    "text": "Qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Doim ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik.",
+    "label": "green"
+  },
+  {
+    "text": "Он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Поспорили с мужем насчет покупки мебели, обычный семейный спор. qo'rqyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади.",
+    "label": "green"
+  },
+  {
+    "text": "Kecha boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman.",
+    "label": "red"
+  },
+  {
+    "text": "Очень устала на работе, эмоциональное выгорание и нет сил готовить ужин. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Yana qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Nafasim qisilib ketguncha bo'ynimdan bo'g'di, hushimdan ketib qolishimga oz qoldi. nima qilishni bilmayapman.",
+    "label": "red"
+  },
+  {
+    "text": "Doim boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman.",
+    "label": "red"
+  },
+  {
+    "text": "Erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг! iltimos maslahat bering.",
+    "label": "red"
+  },
+  {
+    "text": "Очень устала на работе, эмоциональное выгорание и нет сил готовить ужин. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Эрим пулимни олиб қўяди, маошимни ўзимга ишлатишга рухсат бермайди. nima qilishni bilmayapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Турмуш ўртоғим билан маиший масалаларда бироз тортишиб қолдик, лекин ҳал бўлди. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. yordam bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. iltimos maslahat bering.",
+    "label": "green"
+  },
+  {
+    "text": "Эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti. yordam bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim турмуш ўртоғим билан маиший масалаларда бироз тортишиб қолдик, лекин ҳал бўлди.",
+    "label": "green"
+  },
+  {
+    "text": "Kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi! qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. nima qilishni bilmayapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Hozir поспорили с мужем насчет покупки мебели, обычный семейный спор.",
+    "label": "green"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman. nima qilishni bilmayapman.",
+    "label": "green"
+  },
+  {
+    "text": "Yana turmush o'rtog'im bilan maoshimizni qanday taqsimlash haqida biroz tortishib qoldik.",
+    "label": "green"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг!",
+    "label": "red"
+  },
+  {
+    "text": "Қайнонам ҳар куни ҳақорат қилади, руҳий босим ўтказади. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Қайнонам ҳар куни ҳақорат қилади, руҳий босим ўтказади. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Очень устала на работе, эмоциональное выгорание и нет сил готовить ужин. iltimos maslahat bering.",
+    "label": "green"
+  },
+  {
+    "text": "Ishda stress ko'p, doimiy asabiylik bor, dam olishga ehtiyojim bor. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Turmush o'rtog'im bilan maoshimizni qanday taqsimlash haqida biroz tortishib qoldik. qo'rqyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Bugun erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi!",
+    "label": "red"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. iltimos maslahat bering.",
+    "label": "red"
+  },
+  {
+    "text": "Муж полностью контролирует мои финансы и не дает денег даже на базовые вещи. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Meni va bolamni kaltaklab ko'chaga haydab yubordi, qorong'uda qayerga borishni bilmayapman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Поспорили с мужем насчет покупки мебели, обычный семейный спор.",
+    "label": "green"
+  },
+  {
+    "text": "Бошимни ёриб, қонга белади, уйга қулфлаб қўйди, чиқолмаяпман. yordam bering.",
+    "label": "red"
+  },
+  {
+    "text": "Doim pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi.",
+    "label": "red"
+  },
+  {
+    "text": "Yana муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной!",
+    "label": "red"
+  },
+  {
+    "text": "Hozir pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi.",
+    "label": "red"
+  },
+  {
+    "text": "Поспорили с мужем насчет покупки мебели, обычный семейный спор. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Yana муж полностью контролирует мои финансы и не дает денег даже на базовые вещи.",
+    "label": "yellow"
+  },
+  {
+    "text": "Nafasim qisilib ketguncha bo'ynimdan bo'g'di, hushimdan ketib qolishimga oz qoldi. iltimos maslahat bering.",
+    "label": "red"
+  },
+  {
+    "text": "Bugun erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi.",
+    "label": "yellow"
+  },
+  {
+    "text": "Yana kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Qaynanam doim kamsitadi, sen hech kimsan deb haqorat qiladi va ruhiy ezadi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади.",
+    "label": "green"
+  },
+  {
+    "text": "Телефонимни текширади, қариндошларим билан кўришишга рухсат бермайди. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. nima qilishni bilmayapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Bugun муж полностью контролирует мои финансы и не дает денег даже на базовые вещи.",
+    "label": "yellow"
+  },
+  {
+    "text": "Juda boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman.",
+    "label": "red"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. iltimos maslahat bering.",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi.",
+    "label": "red"
+  },
+  {
+    "text": "Он читает все мои переписки в Telegram, запрещает общаться с мамой и подругами. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! yordam bering.",
+    "label": "red"
+  },
+  {
+    "text": "Hozir бошимни ёриб, қонга белади, уйга қулфлаб қўйди, чиқолмаяпман.",
+    "label": "red"
+  },
+  {
+    "text": "Yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Erim pulimni tortib oladi va o'zimga umuman pul ishlatishga qo'ymaydi. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Bugun erim bugun mast bo'lib kelib, bo'g'ib o'ldiraman deb pichoq bilan tashlandi!",
+    "label": "red"
+  },
+  {
+    "text": "Meni uydan chiqarmaydi, ishlashimga mutlaqo ruxsat bermayapti, o'zimni qafasda his qilyapman. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. qo'rqyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Hozir он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию.",
+    "label": "red"
+  },
+  {
+    "text": "Doim kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q.",
+    "label": "green"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. qo'rqyapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim yashashni istamayapman, bu azoblardan charchadim, jonimga qasd qilmoqchiman.",
+    "label": "red"
+  },
+  {
+    "text": "Hozir бугун жуда чарчадим, ишдан кейин ҳеч нарсага ҳолим қолмади.",
+    "label": "green"
+  },
+  {
+    "text": "Ishda stress ko'p, doimiy asabiylik bor, dam olishga ehtiyojim bor. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman. nima qilishni bilmayapman.",
+    "label": "red"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Juda pichoq o'qtalib, agar politsiyaga aytsang so'yib tashlayman deb tahdid qildi.",
+    "label": "red"
+  },
+  {
+    "text": "Муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной! Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Juda муж полностью контролирует мои финансы и не дает денег даже на базовые вещи.",
+    "label": "yellow"
+  },
+  {
+    "text": "Boshimga musht tushirdi, burnim qonadi, hozir eshikni qulflab xonada qo'rqib o'tiribman. Nima qilsam bo'ladi?",
+    "label": "red"
+  },
+  {
+    "text": "Telefonimni har kuni tekshiradi, dugonalarim va qarindoshlarim bilan gaplashishni taqiqlab qo'ygan. Nima qilsam bo'ladi?",
+    "label": "yellow"
+  },
+  {
+    "text": "Doim nafasim qisilib ketguncha bo'ynimdan bo'g'di, hushimdan ketib qolishimga oz qoldi.",
+    "label": "red"
+  },
+  {
+    "text": "Он зверски избил меня, сломал нос, угрожает убить, если я позвоню в милицию. qo'rqyapman.",
+    "label": "red"
+  },
+  {
+    "text": "Ota-onam bilan fikrimiz to'g'ri kelmay qoldi, lekin tinchgina suhbatlashib tushunib oldik. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Он читает все мои переписки в Telegram, запрещает общаться с мамой и подругами. nima qilishni bilmayapman.",
+    "label": "yellow"
+  },
+  {
+    "text": "Yana telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Поспорили с мужем насчет покупки мебели, обычный семейный спор. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Yana telegramda soxta profildan kimdir yozib, shaxsiy ma'lumotlarimni tarqataman deb shantaj qilyapti.",
+    "label": "yellow"
+  },
+  {
+    "text": "Bugun муж схватил за горло и начал душить, угрожает ножом, я заперлась в ванной!",
+    "label": "red"
+  },
+  {
+    "text": "Juda kayfiyatim tushkun, so'nggi paytlarda uyqum yaxshi emas, o'zimni yolg'iz his qilyapman.",
+    "label": "green"
+  },
+  {
+    "text": "Meni va bolamni kaltaklab ko'chaga haydab yubordi, qorong'uda qayerga borishni bilmayapman. yordam bering.",
+    "label": "red"
+  },
+  {
+    "text": "Kichik oilaviy tushunmovchilik bo'ldi, o'rtada hech qanday haqorat yoki qo'rquv yo'q. Nima qilsam bo'ladi?",
+    "label": "green"
+  },
+  {
+    "text": "Kecha эрим пичоқ билан ташланиб, ўлдираман деб бўғди, ёрдам беринг!",
+    "label": "red"
+  },
+  {
+    "text": "Turmush o'rtog'im bilan maoshimizni qanday taqsimlash haqida biroz tortishib qoldik. nima qilishni bilmayapman.",
+    "label": "green"
+  }
+]

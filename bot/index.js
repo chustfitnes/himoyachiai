@@ -155,7 +155,7 @@ Tezkor ishonch telefonlari:
           parse_mode: 'Markdown',
           ...Markup.inlineKeyboard([
             [Markup.button.webApp("Batafsil ma'lumot (Ilovada)", WEBAPP_URL)],
-            [Markup.button.url('📞 1146 ga qo‘ng‘iroq qilish', 'tel:1146')],
+            [Markup.button.callback('📞 Tezkor yordam raqamlari', 'quick_contacts')],
           ]),
         }
       );
@@ -172,7 +172,7 @@ Tezkor ishonch telefonlari:
 }
 
 // Auto-run when executed directly
-if (process.argv[1]?.endsWith('bot/index.js')) {
+if (process.argv[1]?.replace(/\\/g, '/').endsWith('bot/index.js')) {
   const bot = createBot();
   if (bot) {
     bot.launch(() => {

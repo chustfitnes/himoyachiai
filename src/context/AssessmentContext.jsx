@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { TRANSLATIONS } from '../i18n/translations';
 
 const AssessmentContext = createContext(null);
 
@@ -11,36 +12,32 @@ export function AssessmentProvider({ children }) {
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [lang, setLang] = useState('uz'); // 'uz' | 'uz_cyr' | 'ru'
+  const [isStealthMode, setIsStealthMode] = useState(false);
 
-  // Theme state: defaults to user system preference or Telegram theme
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    // Check Telegram theme first if available
-    if (window.Telegram?.WebApp?.colorScheme) {
-      return window.Telegram.WebApp.colorScheme === 'dark';
-    }
-    // Otherwise check media query
-    if (typeof window !== 'undefined' && window.matchMedia) {
-      return window.matchMedia('(prefers-color-scheme: dark)').matches;
-    }
-    return false;
-  });
+  const toggleStealthMode = useCallback(() => {
+    setIsStealthMode((prev) => !prev);
+  }, []);
 
-  // Apply dark mode class to html element
+  const t = useCallback((key) => {
+    return TRANSLATIONS[lang]?.[key] || TRANSLATIONS.uz?.[key] || key;
+  }, [lang]);
+
+  // Clean Light Theme by default (World Standard, High Contrast, Crisp)
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
   useEffect(() => {
     const root = document.documentElement;
-    if (isDarkMode) {
-      root.classList.add('dark');
-      const meta = document.getElementById('theme-color-meta');
-      if (meta) meta.setAttribute('content', '#16181A');
-    } else {
-      root.classList.remove('dark');
-      const meta = document.getElementById('theme-color-meta');
-      if (meta) meta.setAttribute('content', '#FAF8F5');
-    }
-  }, [isDarkMode]);
+    root.classList.remove('dark');
+    root.style.colorScheme = 'light';
+    root.style.backgroundColor = '#F8FAFC';
+    const meta = document.getElementById('theme-color-meta');
+    if (meta) meta.setAttribute('content', '#FFFFFF');
+  }, []);
 
   const toggleTheme = useCallback(() => {
-    setIsDarkMode((prev) => !prev);
+    // Kept for interface compatibility
+    setIsDarkMode(false);
   }, []);
 
   // Clear all in-memory sensitive data
@@ -55,7 +52,6 @@ export function AssessmentProvider({ children }) {
   // Panic button execution: clears all memory and redirects away immediately
   const triggerPanicEscape = useCallback(() => {
     clearAllData();
-    // Neutral destination that wipes navigation history stack forward/back
     window.location.replace('https://www.google.com');
   }, [clearAllData]);
 
@@ -66,7 +62,6 @@ export function AssessmentProvider({ children }) {
       if (e.key === 'Escape') {
         const now = Date.now();
         if (now - lastEscPress < 600) {
-          // Double press detected within 600ms
           triggerPanicEscape();
         } else {
           lastEscPress = now;
@@ -85,17 +80,8 @@ export function AssessmentProvider({ children }) {
       try {
         tg.ready();
         tg.expand();
-
-        // Sync theme with Telegram
-        if (tg.themeParams && tg.colorScheme) {
-          setIsDarkMode(tg.colorScheme === 'dark');
-        }
-
-        tg.onEvent?.('themeChanged', () => {
-          if (tg.colorScheme) {
-            setIsDarkMode(tg.colorScheme === 'dark');
-          }
-        });
+        tg.setHeaderColor?.('#FFFFFF');
+        tg.setBackgroundColor?.('#F8FAFC');
       } catch (err) {
         console.debug('Telegram WebApp initialization skipped outside Telegram');
       }
@@ -117,6 +103,12 @@ export function AssessmentProvider({ children }) {
     triggerPanicEscape,
     isDarkMode,
     toggleTheme,
+    lang,
+    setLang,
+    t,
+    isStealthMode,
+    setIsStealthMode,
+    toggleStealthMode,
   };
 
   return (

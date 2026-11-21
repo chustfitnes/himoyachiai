@@ -1,113 +1,86 @@
 import React from 'react';
-import { ShieldCheck, EyeOff, Trash2, Globe, Send, AlertTriangle, Layers } from 'lucide-react';
+import { ShieldCheck, EyeOff, Trash2, Globe, Send, AlertTriangle, Layers, Lock, Cpu, ServerOff } from 'lucide-react';
 
 export default function Privacy() {
   return (
-    <div className="py-4 sm:py-8 space-y-6 sm:space-y-8">
-      <div>
-        <h1 className="text-2xl sm:text-3xl font-serif font-bold text-ink-primary-light dark:text-ink-primary-dark tracking-tight">
-          Maxfiylik va xavfsizlik kafolati
+    <div className="py-4 sm:py-8 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in text-slate-900">
+      
+      {/* Title */}
+      <div className="card-senior p-6 sm:p-8 space-y-2">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1">
+          <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <span>Xavfsizlik & Maxfiylik Bayonnomasi</span>
+        </div>
+        <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+          Maxfiylik va Xavfsizlik Kafolati
         </h1>
-        <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark mt-1 font-sans">
-          Biz sizning to‘liq maxfiyligingiz va xavfsizligingizni qanday ta’minlashimiz haqida ochiq bayon.
+        <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
+          Biz sizning to‘liq maxfiyligingiz va xavfsizligingizni qanday ta’minlashimiz haqida ochiq texnik bayonnoma.
         </p>
       </div>
 
-      {/* Zero-Log Policy Cards */}
-      <div className="space-y-4">
-        {/* Coverage Scope: Every Situation */}
-        <div className="p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center text-brand-600 dark:text-brand-300">
-              <Layers className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Har qanday vaziyatda teng himoya
-            </h2>
+      {/* Architecture Features */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        
+        {/* Zero-Log Policy */}
+        <div className="p-6 rounded-2xl card-senior space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <ServerOff className="w-5 h-5" />
           </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-            HimoyaAI nafaqat oiladagi tazyiq, balki ko‘chada (ta'qib qilish, taksida ushlab turish), ish yoki o‘qish joyidagi bosim hamda internetdagi xavflar (suratlar bilan shantaj, bolalarni aldash) bo‘yicha ham birdek xolis ko‘mak beradi.
+          <h2 className="font-heading font-bold text-base text-slate-900">
+            Ma’lumotlar bazasi mavjud emas (Zero-Log)
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+            Siz kiritgan holat tasviri va tahlil natijalari serverimizning doimiy xotirasida (diskda) hech qachon saqlanmaydi. Bizda MySQL, MongoDB, PostgreSQL yoki boshqa ma’lumotlar bazasi mutlaqo mavjud emas.
           </p>
         </div>
 
-        {/* Memory Only */}
-        <div className="p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 flex items-center justify-center text-emerald-600 dark:text-emerald-300">
-              <EyeOff className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Ma'lumotlar bazasi mavjud emas (Zero-Log Policy)
-            </h2>
+        {/* RAM-Only Processing */}
+        <div className="p-6 rounded-2xl card-senior space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <Cpu className="w-5 h-5" />
           </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-            Siz kiritgan holat tasviri va tahlil natijalari faqat qurilmangizning vaqtinchalik operativ xotirasida (RAM) turadi. Bizning serverlarimizda hech qanday ma'lumotlar bazasi yo'q, xabarlar jurnali (logs) yuritilmaydi va sahifa yopilgach xotiradan butunlay yo‘qoladi.
+          <h2 className="font-heading font-bold text-base text-slate-900">
+            Faqat operativ xotirada (RAM-only)
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+            Matningiz sun’iy intellektga yuborilayotgan millisekundlardagina serverning operativ xotirasida (RAM) turadi va tahlil yakunlanishi bilan bir zumda o‘chiriladi.
           </p>
         </div>
 
-        {/* No local storage / cookies */}
-        <div className="p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-brand-50 dark:bg-brand-950/40 flex items-center justify-center text-brand-600 dark:text-brand-300">
-              <Trash2 className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Brauzer xotirasiga yozilmaydi
-            </h2>
+        {/* No local storage or cookies */}
+        <div className="p-6 rounded-2xl card-senior space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <EyeOff className="w-5 h-5" />
           </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-            Ilova brauzerning <code className="text-xs bg-surfaceSubtle-light dark:bg-surfaceSubtle-dark px-1.5 py-0.5 rounded">localStorage</code> yoki <code className="text-xs bg-surfaceSubtle-light dark:bg-surfaceSubtle-dark px-1.5 py-0.5 rounded">cookies</code> omborlariga hech qanday shaxsiy matn yoki natijalarni saqlamaydi.
+          <h2 className="font-heading font-bold text-base text-slate-900">
+            Brauzerda iz qoldirmaydi
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+            Tizim brauzerning <code className="text-xs bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">localStorage</code> yoki <code className="text-xs bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded font-mono">cookies</code> omborlariga hech qanday shaxsiy matn yoki natijalarni yozmaydi.
           </p>
         </div>
 
-        {/* Telegram Mini App Safety */}
-        <div className="p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-sky-50 dark:bg-sky-950/40 flex items-center justify-center text-sky-600 dark:text-sky-300">
-              <Send className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Telegram Mini App xavfsizligi
-            </h2>
+        {/* Equal Protection */}
+        <div className="p-6 rounded-2xl card-senior space-y-3">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <Layers className="w-5 h-5" />
           </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-            Telegram ichida ochilganda ilova telefonga alohida dastur sifatida o‘rnatilmaydi va ilovalar ro‘yxatida ko‘rinmaydi. Foydalangandan so‘ng Telegram chat tarixini tozalash (Clear history) kifoya qiladi.
+          <h2 className="font-heading font-bold text-base text-slate-900">
+            Har qanday vaziyatda xolis yordam
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-sans">
+            HimoyaAI nafaqat oiladagi tazyiq, balki ko‘chada ta’qib, taksida xavf, ish yoki o‘qish joyidagi bosim hamda kiber-makondagi shantaj bo‘yicha ham birdek xolis ko‘mak beradi.
           </p>
         </div>
+      </div>
 
-        {/* Browser History & Incognito Advice */}
-        <div className="p-5 rounded-2xl border border-amber-200 bg-amber-50/60 dark:border-amber-800/80 dark:bg-amber-950/30 shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/60 flex items-center justify-center text-amber-700 dark:text-amber-300">
-              <AlertTriangle className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Brauzer tarixi va Inkognito (maxfiy) rejim
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed mb-3">
-            Telefoningiz brauzeri siz tashrif buyurgan sayt manzilini "Tarix" (History) bo‘limida ko‘rsatishi mumkin.
-          </p>
-          <div className="text-xs text-ink-secondary-light dark:text-ink-secondary-dark space-y-1.5 pl-3 border-l-2 border-amber-400">
-            <p><strong>Tavsiya:</strong> Ilovaga kirishdan oldin brauzeringizda <em>"Inkognito rejim" (Incognito / Yangi maxfiy vkladka)</em> oching.</p>
-            <p>Xavf tug‘ilganda yuqori burchakdagi <strong>"Tezkor chiqish"</strong> tugmasini bosing yoki klaviaturada <strong>Esc</strong> tugmasini ikki marta tez bosing.</p>
-          </div>
-        </div>
-
-        {/* Camouflage tab title notice */}
-        <div className="p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft">
-          <div className="flex items-center gap-3 mb-2">
-            <div className="w-8 h-8 rounded-lg bg-purple-50 dark:bg-purple-950/40 flex items-center justify-center text-purple-600 dark:text-purple-300">
-              <Globe className="w-4 h-4" />
-            </div>
-            <h2 className="font-serif font-bold text-base text-ink-primary-light dark:text-ink-primary-dark">
-              Niqoblangan sarlavha (Kamuflaj)
-            </h2>
-          </div>
-          <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-            Brauzer vkladkalari va ko‘rinishi begonalar e’tiborini tortmasligi uchun sahifaning tashqi sarlavhasi betaraf <em>"Eslatmalar — Shaxsiy qaydlar"</em> ko‘rinishida niqoblangan.
-          </p>
-        </div>
+      {/* Emergency Exit Shortcut Note */}
+      <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 flex items-start gap-3.5 text-xs text-slate-600 font-sans">
+        <Lock className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+        <p>
+          <strong>Tezkor Chiqish (Panic Button):</strong> Agar kutilmaganda xonaga boshqa shaxs kirib qolsa, klaviaturadagi <kbd className="px-1.5 py-0.5 rounded bg-slate-200 text-slate-800 font-mono text-[11px]">Esc</kbd> tugmasini 2 marta bosing yoki yuqori o‘ng burchakdagi "Chiqish" tugmasini bosing — sayt darhol neytral qidiruv tizimiga yo‘naltiriladi va barcha ma'lumotlar o‘chiriladi.
+        </p>
       </div>
     </div>
   );

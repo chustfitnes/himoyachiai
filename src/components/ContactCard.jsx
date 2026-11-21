@@ -7,7 +7,7 @@ export const CONTACT_REGISTRY = {
     title: '1146 — Ayollar va bolalar ishonch telefoni',
     phone: '1146',
     phoneDisplay: '1146',
-    badge: '24/7 &bull; Bepul',
+    badge: '24/7 • Bepul',
     desc: "Tazyiq, zo'ravonlik yoki shantajga uchragan xotin-qizlar va bolalar uchun davlat ishonch telefoni. Mutaxassislar bilan to'liq maxfiy suhbat.",
     icon: Phone,
     highlight: true,
@@ -58,61 +58,72 @@ export const CONTACT_REGISTRY = {
     phone: '1102',
     phoneDisplay: '1102',
     badge: 'Kiberxavfsizlik',
-    desc: "Shaxsiy suratlarni tarqatish bilan shantaj qilish (sextortion), akkaunt buzish va internetdagi tahdidlar bo'yicha tezkor murojaat.",
+    desc: "Telegram, Instagram orqali shaxsiy fotosuratlarni tarqatish, akkauntni buzish, tovlamachilik va intim shantaj holatlari bo'yicha.",
     icon: Globe,
-    highlight: true,
-  },
-  trusted_adult: {
-    id: 'trusted_adult',
-    title: 'Ishonchli katta yoshli inson',
-    phone: '1146',
-    phoneDisplay: '1146 / Oila',
-    badge: 'Bolalar himoyasi',
-    desc: "Ota-onangiz, yaqin qarindoshingiz yoki maktabdagi ishonchli o'qituvchingizga ayting. Uyat yoki ayb aslo sizda emas.",
-    icon: Users,
-    highlight: true,
+    highlight: false,
   },
 };
 
 export default function ContactCard({ contactKey }) {
-  const data = CONTACT_REGISTRY[contactKey];
-  if (!data) return null;
+  const item = CONTACT_REGISTRY[contactKey];
+  if (!item) return null;
 
-  const IconComp = data.icon;
+  const IconComponent = item.icon || Phone;
 
   return (
-    <div className="p-4 sm:p-5 rounded-2xl border border-borderSubtle-light bg-surface-light dark:border-borderSubtle-dark dark:bg-surface-dark shadow-soft transition-colors flex flex-col justify-between gap-3">
-      <div>
-        <div className="flex items-center justify-between gap-2 mb-1.5">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-surfaceSubtle-light dark:bg-surfaceSubtle-dark flex items-center justify-center text-brand-600 dark:text-brand-300 shrink-0">
-              <IconComp className="w-4 h-4" />
+    <div
+      className={`card-senior-interactive p-5 sm:p-6 flex flex-col justify-between space-y-4 ${
+        item.highlight
+          ? 'border-emerald-300 bg-emerald-50/30'
+          : 'bg-white'
+      }`}
+    >
+      <div className="space-y-3">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex items-center gap-3">
+            <div
+              className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 shadow-xs ${
+                item.highlight
+                  ? 'bg-emerald-600 text-white'
+                  : 'bg-slate-100 text-slate-700 border border-slate-200/80'
+              }`}
+            >
+              <IconComponent className="w-5 h-5" />
             </div>
-            <h3 className="font-semibold text-sm sm:text-base text-ink-primary-light dark:text-ink-primary-dark">
-              {data.title}
+            <h3 className="font-heading font-bold text-sm text-slate-900 leading-snug">
+              {item.title}
             </h3>
           </div>
           <span
-            className="text-[11px] px-2 py-0.5 rounded-full font-medium bg-surfaceSubtle-light text-ink-secondary-light border border-borderSubtle-light dark:bg-surfaceSubtle-dark dark:text-ink-secondary-dark dark:border-borderSubtle-dark shrink-0"
-            dangerouslySetInnerHTML={{ __html: data.badge }}
-          />
+            className={`text-[10px] font-heading font-bold px-2.5 py-1 rounded-full border whitespace-nowrap shrink-0 ${
+              item.highlight
+                ? 'bg-emerald-100 text-emerald-800 border-emerald-200'
+                : 'bg-slate-100 text-slate-700 border-slate-200'
+            }`}
+          >
+            {item.badge}
+          </span>
         </div>
-        <p className="text-xs sm:text-sm text-ink-secondary-light dark:text-ink-secondary-dark leading-relaxed">
-          {data.desc}
+
+        <p className="text-xs font-sans text-slate-600 leading-relaxed">
+          {item.desc}
         </p>
       </div>
 
-      <div className="pt-2 border-t border-borderSubtle-light dark:border-borderSubtle-dark flex items-center justify-between">
-        <span className="text-xs text-ink-muted-light dark:text-ink-muted-dark">
-          Bog'lanish:
+      <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-3">
+        <span className="text-base font-mono font-bold text-slate-900">
+          {item.phoneDisplay}
         </span>
         <a
-          href={`tel:${data.phone}`}
-          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-brand-50 hover:bg-brand-100 text-brand-700 font-medium text-xs sm:text-sm rounded-lg border border-brand-200 transition-colors focus:ring-2 focus:ring-brand-500 focus:outline-none dark:bg-brand-900/40 dark:text-brand-200 dark:border-brand-700/60 min-h-[44px]"
-          aria-label={`${data.title} ga qo‘ng‘iroq qilish (${data.phoneDisplay})`}
+          href={`tel:${item.phone}`}
+          className={`px-4 py-2 rounded-xl text-xs font-heading font-bold flex items-center gap-1.5 transition-all shadow-xs cursor-pointer active:scale-95 ${
+            item.highlight
+              ? 'bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/20'
+              : 'bg-slate-900 hover:bg-slate-800 text-white'
+          }`}
         >
-          <Phone className="w-3.5 h-3.5 text-brand-600 dark:text-brand-300" />
-          <span>Qo‘ng‘iroq: {data.phoneDisplay}</span>
+          <Phone className="w-3.5 h-3.5" />
+          <span>Qo‘ng‘iroq</span>
         </a>
       </div>
     </div>
