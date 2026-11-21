@@ -9,7 +9,7 @@ export default function EmergencyFooter() {
 
   return (
     <footer
-      className="mt-auto border-t border-slate-200/80 bg-white/80 backdrop-blur-sm py-8 pb-safe text-slate-900"
+      className="mt-auto border-t border-slate-200/80 bg-white/80 backdrop-blur-sm py-6 sm:py-8 pb-28 lg:pb-8 text-slate-900"
       aria-label="Favqulodda yordam va ma'lumotlar"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">

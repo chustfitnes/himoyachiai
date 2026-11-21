@@ -13,7 +13,6 @@ import {
   IoChevronDown,
   IoGlobeOutline,
   IoCheckmark,
-  IoShieldCheckmark,
   IoHome
 } from 'react-icons/io5';
 import { MdSecurity } from 'react-icons/md';
@@ -49,21 +48,21 @@ export default function Header() {
   const currentLang = LANG_OPTIONS.find((item) => item.code === lang) || LANG_OPTIONS[0];
 
   const NAV_LINKS = [
-    { to: '/', label: t('nav_home') || 'Asosiy', icon: IoHome, end: true },
-    { to: '/describe', label: t('nav_describe') || 'AI Diagnostika', icon: IoSparkles, badge: 'AI' },
-    { to: '/safewalk', label: t('nav_safewalk') || 'SafeWalk', icon: IoCarSport, pulse: true },
-    { to: '/evidence', label: t('nav_evidence') || 'Dalillar Seyfi', icon: IoLockClosed },
-    { to: '/safety-plan', label: t('nav_safety_plan') || 'Xavfsizlik Rejasi', icon: IoDocumentText },
-    { to: '/resources', label: t('nav_resources') || 'Yordam (1146)', icon: IoCall },
+    { to: '/', label: t('nav_home_short'), icon: IoHome, end: true },
+    { to: '/describe', label: t('nav_describe_short'), icon: IoSparkles, badge: 'AI' },
+    { to: '/safewalk', label: t('nav_safewalk'), icon: IoCarSport, pulse: true },
+    { to: '/evidence', label: t('nav_evidence_short'), icon: IoLockClosed },
+    { to: '/safety-plan', label: t('nav_safety_plan_short'), icon: IoDocumentText },
+    { to: '/resources', label: t('nav_resources_short'), icon: IoCall },
   ];
 
   return (
     <>
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-slate-200/80 shadow-[0_1px_3px_0_rgba(15,23,42,0.03)] transition-all">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 lg:gap-6">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 h-14 sm:h-16 flex items-center justify-between gap-1.5 sm:gap-4">
           
           {/* Brand Identity: Official Himoya AI Civic Logo */}
-          <div className="flex items-center shrink-0">
+          <div className="flex items-center shrink-0 min-w-0">
             <Link
               to="/"
               className="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 rounded-lg transition-transform active:scale-[0.98]"
@@ -72,35 +71,28 @@ export default function Header() {
               <img
                 src={logoImg}
                 alt="Himoya AI Civic"
-                className="h-9 sm:h-10 md:h-11 w-auto max-w-[160px] sm:max-w-[210px] object-contain select-none transition-opacity group-hover:opacity-90"
+                className="h-7 sm:h-9 md:h-10 w-auto max-w-[130px] sm:max-w-[170px] md:max-w-[210px] object-contain select-none transition-opacity group-hover:opacity-90"
               />
             </Link>
           </div>
 
-          {/* Desktop Navigation: Centered, Harmonized, Responsive */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 justify-center flex-1 mx-2" aria-label="Asosiy menyu">
+          {/* Desktop Navigation: Compact, Clean, 100% Fit on 100% scale */}
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-1.5 justify-center flex-1 mx-1 sm:mx-2 min-w-0" aria-label="Asosiy menyu">
             {NAV_LINKS.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 end={item.end}
                 className={({ isActive }) =>
-                  `inline-flex items-center gap-1.5 px-2.5 py-1.5 xl:px-3.5 xl:py-2 rounded-full text-xs xl:text-[13px] font-heading whitespace-nowrap transition-all duration-150 select-none ${
+                  `inline-flex items-center gap-1.5 px-2.5 py-1.5 xl:px-3 rounded-full text-xs xl:text-[13px] font-heading whitespace-nowrap transition-all duration-150 select-none ${
                     isActive
                       ? 'bg-slate-950 text-white shadow-xs font-semibold'
-                      : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100/80 font-medium'
+                      : 'text-slate-600 hover:text-slate-950 hover:bg-slate-100 font-medium'
                   }`
                 }
               >
                 {({ isActive }) => (
                   <>
-                    {item.icon && (
-                      <item.icon
-                        className={`w-3.5 h-3.5 shrink-0 transition-colors ${
-                          isActive ? 'text-emerald-400' : 'text-slate-400'
-                        }`}
-                      />
-                    )}
                     <span>{item.label}</span>
                     {item.badge && (
                       <span
@@ -122,44 +114,19 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Action Dock: Pixel-balanced 36px controls */}
-          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-            
-            {/* Fake Call Trigger */}
-            <button
-              type="button"
-              onClick={() => setIsFakeCallOpen(true)}
-              className="h-9 inline-flex items-center gap-1.5 px-2.5 sm:px-3 rounded-full bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 text-slate-700 text-xs font-heading font-semibold transition-all cursor-pointer active:scale-95 whitespace-nowrap shadow-xs group"
-              title={t('action_fake_call_tip') || t('fake_call_tip') || "Noqulay vaziyatdan chiqish uchun soxta qo'ng'iroq"}
-              aria-label={t('action_fake_call') || "Soxta qo‘ng‘iroq"}
-            >
-              <IoCall className="w-3.5 h-3.5 text-emerald-600 group-hover:scale-110 transition-transform shrink-0" />
-              <span className="hidden 2xl:inline">{t('action_fake_call') || 'Soxta qo‘ng‘iroq'}</span>
-            </button>
-
-            {/* Stealth Disguise Button */}
-            <button
-              type="button"
-              onClick={toggleStealthMode}
-              className="h-9 inline-flex items-center gap-1.5 px-2.5 sm:px-3 rounded-full bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 text-slate-700 text-xs font-heading font-semibold transition-all cursor-pointer active:scale-95 whitespace-nowrap shadow-xs group"
-              title={t('action_stealth_tip') || t('stealth_tip') || "Niqob rejimini yoqish (oshpazlik retseptlari)"}
-              aria-label="Niqob rejimini yoqish"
-            >
-              <IoRestaurant className="w-3.5 h-3.5 text-slate-600 group-hover:scale-110 transition-transform shrink-0" />
-              <span className="hidden 2xl:inline text-slate-700">{t('action_stealth') || t('stealth_btn_short') || "Niqob"}</span>
-            </button>
-
-            {/* Language Selector Dropdown */}
+          {/* Right Action Dock: Responsively Balanced, Never Overflows on Mobile */}
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+            {/* Language Selector Dropdown (Compact on Mobile) */}
             <div className="relative" ref={langRef}>
               <button
                 type="button"
                 onClick={() => setIsLangOpen(!isLangOpen)}
-                className="h-9 inline-flex items-center gap-1.5 px-2.5 sm:px-3 rounded-full bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 text-slate-700 text-xs font-heading font-semibold transition-all cursor-pointer active:scale-95 shadow-xs whitespace-nowrap"
+                className="h-8 sm:h-9 inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-2.5 rounded-full bg-slate-100 hover:bg-slate-200/90 border border-slate-200 text-slate-700 text-xs font-heading font-semibold transition-all cursor-pointer active:scale-95 shadow-2xs whitespace-nowrap"
                 title="Tilni tanlash"
                 aria-label="Tilni tanlash"
               >
                 <IoGlobeOutline className="w-3.5 h-3.5 text-slate-500 shrink-0" />
-                <span className="font-semibold">{currentLang.short}</span>
+                <span>{currentLang.short}</span>
                 <IoChevronDown className={`w-3 h-3 text-slate-400 transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -193,14 +160,14 @@ export default function Header() {
               )}
             </div>
 
-            {/* World-Class Emergency Exit Button */}
+            {/* Emergency Panic Button */}
             <PanicButton compact={false} />
 
-            {/* Mobile Hamburger Toggle */}
+            {/* Mobile Hamburger Toggle (Always cleanly visible on mobile) */}
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="h-9 w-9 lg:hidden inline-flex items-center justify-center rounded-xl text-slate-700 hover:text-slate-950 bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/90 transition-colors cursor-pointer text-lg"
+              className="h-8 sm:h-9 w-8 sm:w-9 lg:hidden inline-flex items-center justify-center rounded-xl text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200/90 border border-slate-200 transition-colors cursor-pointer text-lg shrink-0"
               aria-label={isMobileMenuOpen ? "Menyuni yopish" : "Menyuni ochish"}
             >
               {isMobileMenuOpen ? <IoClose /> : <IoMenu />}
@@ -210,18 +177,55 @@ export default function Header() {
 
         {/* Mobile Dropdown Menu with Full Suite & Hotlines */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-xl px-4 py-4 space-y-4 shadow-xl animate-fade-in">
+          <div className="lg:hidden border-t border-slate-200/80 bg-white/98 backdrop-blur-xl px-4 py-4 space-y-4 shadow-2xl animate-fade-in max-h-[calc(100vh-60px)] overflow-y-auto">
             
             {/* Mobile Brand Header */}
             <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-              <img src={logoImg} alt="Himoya AI" className="h-8 w-auto object-contain" />
+              <img src={logoImg} alt="Himoya AI" className="h-7 w-auto object-contain" />
               <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80">
                 CIVIC PLATFORM
               </span>
             </div>
 
+            {/* Mobile Stealth & Privacy Action Cards (Prominently featured for mobile safety) */}
+            <div className="grid grid-cols-2 gap-2.5">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsFakeCallOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="p-3 rounded-xl bg-slate-50 hover:bg-emerald-50 border border-slate-200 hover:border-emerald-200 text-left transition-all group"
+              >
+                <div className="flex items-center gap-2 text-emerald-600 font-heading font-bold text-xs mb-1">
+                  <IoCall className="w-4 h-4" />
+                  <span>{t('action_fake_call') || "Soxta qo‘ng‘iroq"}</span>
+                </div>
+                <p className="text-[10px] text-slate-500 font-sans leading-tight">
+                  Noqulay vaziyatdan chiqish
+                </p>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => {
+                  toggleStealthMode();
+                  setIsMobileMenuOpen(false);
+                }}
+                className="p-3 rounded-xl bg-slate-50 hover:bg-amber-50 border border-slate-200 hover:border-amber-200 text-left transition-all group"
+              >
+                <div className="flex items-center gap-2 text-slate-700 group-hover:text-amber-800 font-heading font-bold text-xs mb-1">
+                  <IoRestaurant className="w-4 h-4" />
+                  <span>{t('action_stealth') || "Niqob rejimi"}</span>
+                </div>
+                <p className="text-[10px] text-slate-500 font-sans leading-tight">
+                  Retseptlar bilan niqoblash
+                </p>
+              </button>
+            </div>
+
             {/* Primary Nav Links */}
-            <div className="space-y-1">
+            <div className="space-y-1 pt-1">
               {NAV_LINKS.map((item) => (
                 <NavLink
                   key={item.to}
@@ -231,8 +235,8 @@ export default function Header() {
                   className={({ isActive }) =>
                     `flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-heading font-semibold transition-all ${
                       isActive
-                        ? 'text-emerald-800 bg-emerald-50/90 border border-emerald-200/80'
-                        : 'text-slate-700 hover:bg-slate-100'
+                        ? 'text-slate-950 bg-slate-100 border border-slate-300 font-bold'
+                        : 'text-slate-700 hover:bg-slate-50'
                     }`
                   }
                 >
@@ -240,7 +244,17 @@ export default function Header() {
                     {item.icon && <item.icon className="w-4 h-4 text-slate-500" />}
                     <span>{item.label}</span>
                   </span>
-                  <IoChevronForward className="w-4 h-4 text-slate-400" />
+                  <div className="flex items-center gap-1.5">
+                    {item.badge && (
+                      <span className="px-1.5 py-0.2 rounded text-[9px] font-mono font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                        {item.badge}
+                      </span>
+                    )}
+                    {item.pulse && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    )}
+                    <IoChevronForward className="w-4 h-4 text-slate-400" />
+                  </div>
                 </NavLink>
               ))}
             </div>
@@ -262,37 +276,10 @@ export default function Header() {
                   href="tel:102"
                   className="px-3 py-2.5 rounded-xl bg-rose-50/90 border border-rose-200/90 text-rose-800 text-xs font-heading font-bold flex items-center justify-center gap-2 hover:bg-rose-100 transition-colors"
                 >
-                  <MdSecurity className="w-4 h-4 text-rose-600" />
+                  <MdSecurity className="w-3.5 h-3.5 text-rose-600" />
                   <span>102 IIB</span>
                 </a>
               </div>
-            </div>
-
-            {/* Mobile Privacy & Disguise Actions */}
-            <div className="pt-2 border-t border-slate-100 grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsFakeCallOpen(true);
-                  setIsMobileMenuOpen(false);
-                }}
-                className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200/80 border border-slate-200 text-slate-700 text-xs font-heading font-medium flex items-center justify-center gap-1.5"
-              >
-                <IoCall className="w-3.5 h-3.5 text-emerald-600" />
-                <span>{t('action_fake_call') || "Soxta qo‘ng‘iroq"}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  toggleStealthMode();
-                  setIsMobileMenuOpen(false);
-                }}
-                className="px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200/80 border border-slate-200 text-slate-700 text-xs font-heading font-medium flex items-center justify-center gap-1.5"
-              >
-                <IoRestaurant className="w-3.5 h-3.5 text-slate-600" />
-                <span>{t('action_stealth') || "Niqob rejimi"}</span>
-              </button>
             </div>
           </div>
         )}

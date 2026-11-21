@@ -15,11 +15,17 @@ export const TRANSLATIONS = {
     brand_tag: "CIVIC",
     brand_subtitle: "O‘zbekiston Respublikasi • Huquqiy Himoya Tizimi",
     nav_home: "Bosh sahifa",
+    nav_home_short: "Bosh sahifa",
     nav_describe: "Vaziyatni baholash",
+    nav_describe_short: "AI Tahlil",
     nav_safewalk: "SafeWalk",
+    nav_safewalk_short: "SafeWalk",
     nav_evidence: "Dalillar Seyfi",
+    nav_evidence_short: "Dalillar Seyfi",
     nav_safety_plan: "Xavfsizlik rejasi",
+    nav_safety_plan_short: "Xavfsizlik rejasi",
     nav_resources: "Yordam markazlari (1146)",
+    nav_resources_short: "Yordam (1146)",
     nav_privacy: "Maxfiylik kafolati",
 
     // Header Quick Actions
@@ -29,6 +35,9 @@ export const TRANSLATIONS = {
     action_stealth_tip: "Saytni oshxona retseptlari ko‘rinishiga bir zumda aylantirish",
     action_panic: "Chiqish",
     action_panic_tip: "Barcha izlarni tozalab darhol yopish (Esc tugmasini 2 marta bosing)",
+    panic_exit: "Tezkor Chiqish",
+    panic_exit_short: "Chiqish",
+    panic_tip: "Tezkor Chiqish: Sahifani yopadi va Google'ga yo'naltiradi (Esc tugmasini 2 marta bosing)",
 
     // Hero Section
     hero_badge: "O‘zbekiston Respublikasi • Huquqiy Himoya & Xavfsizlik Konsoli",
@@ -182,11 +191,17 @@ export const TRANSLATIONS = {
     brand_tag: "CIVIC",
     brand_subtitle: "Ўзбекистон Республикаси • Ҳуқуқий Ҳимоя Тизими",
     nav_home: "Бош саҳифа",
+    nav_home_short: "Бош саҳифа",
     nav_describe: "Вазиятни баҳолаш",
+    nav_describe_short: "AI Таҳлил",
     nav_safewalk: "SafeWalk",
+    nav_safewalk_short: "SafeWalk",
     nav_evidence: "Далиллар Сейфи",
+    nav_evidence_short: "Далиллар Сейфи",
     nav_safety_plan: "Хавфсизлик режаси",
+    nav_safety_plan_short: "Хавфсизлик режаси",
     nav_resources: "Ёрдам марказлари (1146)",
+    nav_resources_short: "Ёрдам (1146)",
     nav_privacy: "Махфийлик кафолати",
 
     // Header Quick Actions
@@ -196,6 +211,9 @@ export const TRANSLATIONS = {
     action_stealth_tip: "Сайтни ошхона рецептлари кўринишига бир зумда айлантириш",
     action_panic: "Чиқиш",
     action_panic_tip: "Барча изларни тозалаб дарҳол ёпиш (Esc тугмасини 2 марта босинг)",
+    panic_exit: "Тезкор Чиқиш",
+    panic_exit_short: "Чиқиш",
+    panic_tip: "Тезкор Чиқиш: Саҳифани ёпади ва Google'га йўналтиради (Esc тугмасини 2 марта босинг)",
 
     // Hero Section
     hero_badge: "Ўзбекистон Республикаси • Ҳуқуқий Ҳимоя & Хавфсизлик Консоли",
@@ -349,11 +367,17 @@ export const TRANSLATIONS = {
     brand_tag: "CIVIC",
     brand_subtitle: "Республика Узбекистан • Система Правовой Защиты",
     nav_home: "Главная",
+    nav_home_short: "Главная",
     nav_describe: "Оценка ситуации",
+    nav_describe_short: "AI Анализ",
     nav_safewalk: "SafeWalk",
+    nav_safewalk_short: "SafeWalk",
     nav_evidence: "Сейф доказательств",
+    nav_evidence_short: "Сейф доказательств",
     nav_safety_plan: "План безопасности",
+    nav_safety_plan_short: "План безопасности",
     nav_resources: "Центры помощи (1146)",
+    nav_resources_short: "Помощь (1146)",
     nav_privacy: "Гарантия приватности",
 
     // Header Quick Actions
@@ -363,6 +387,9 @@ export const TRANSLATIONS = {
     action_stealth_tip: "Мгновенно замаскировать сайт под кулинарные рецепты",
     action_panic: "Выход",
     action_panic_tip: "Стереть все следы и немедленно закрыть (дважды нажмите Esc)",
+    panic_exit: "Экстренный Выход",
+    panic_exit_short: "Выход",
+    panic_tip: "Экстренный выход: немедленно закрывает страницу и переходит в Google (дважды нажмите Esc)",
 
     // Hero Section
     hero_badge: "Республика Узбекистан • Консоль Правовой Защиты и Безопасности",
