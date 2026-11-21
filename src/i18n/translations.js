@@ -117,6 +117,11 @@ export const TRANSLATIONS = {
     mod3_desc: "Telegram, Instagramdagi shantaj yoki tahdid xabarlarini xronologik tartiblab, ichki ishlar organlariga topshiriladigan rasmiy ariza matnini shakllantiradi.",
     mod3_btn: "Arizani shakllantirish",
 
+    mod4_title: "Soxta Qo‘ng‘iroq",
+    mod4_subtitle: "Qutqaruvchi kiruvchi simulyatsiya",
+    mod4_desc: "Noqulay, xavfli yoki noo‘rin suhbatdan qonuniy va xushmuomala chiqib ketish uchun bir zumda kiruvchi real qo‘ng‘iroq simulyatori.",
+    mod4_btn: "Qo‘ng‘iroqni boshlash",
+
     // Hotlines Strip
     hotlines_title: "Vakolatli Davlat va Nodavlat Yordam Tarmoqlari:",
     hotlines_free: "24/7 Bepul",
@@ -293,6 +298,11 @@ export const TRANSLATIONS = {
     mod3_desc: "Телеграм, Инстаграмдаги шантаж ёки таҳдид хабарларини хронологик тартиблаб, ички ишлар органларига топшириладиган расмий ариза матнини шакллантиради.",
     mod3_btn: "Аризани шакллантириш",
 
+    mod4_title: "Сохта Қўнғироқ",
+    mod4_subtitle: "Қутқарувчи кирувчи симуляция",
+    mod4_desc: "Ноқулай, хавфли ёки ноўрин суҳбатдан қонуний ва хушмуомала чиқиб кетиш учун бир зумда кирувчи реал қўнғироқ симулятори.",
+    mod4_btn: "Қўнғироқни бошлаш",
+
     // Hotlines Strip
     hotlines_title: "Ваколатли Давлат ва Нодавлат Ёрдам Тармоқлари:",
     hotlines_free: "24/7 Бепул",
@@ -468,6 +478,11 @@ export const TRANSLATIONS = {
     mod3_subtitle: "УК 141-3 • УК 165 • Официальное заявление",
     mod3_desc: "Хронологическая фиксация фактов шантажа в Telegram/Instagram и формирование официального заявления в органы внутренних дел.",
     mod3_btn: "Сформировать заявление",
+
+    mod4_title: "Ложный Звонок",
+    mod4_subtitle: "Спасительная симуляция входящего",
+    mod4_desc: "Мгновенная реалистичная симуляция входящего звонка для вежливого и безопасного выхода из неприятной или опасной ситуации.",
+    mod4_btn: "Запустить звонок",
 
     // Hotlines Strip
     hotlines_title: "Официальные государственные и негосударственные службы помощи:",

@@ -154,6 +154,16 @@ export default function Home() {
             <HelpCircle className="w-4 h-4 text-slate-500 shrink-0" />
             <span>{t('hero_cta_screener')}</span>
           </button>
+
+          <button
+            type="button"
+            onClick={() => setIsFakeCallOpen(true)}
+            className="w-full sm:w-auto px-4 sm:px-5 py-3 sm:py-4 rounded-xl bg-emerald-50 hover:bg-emerald-100/90 border border-emerald-200 text-emerald-900 font-heading font-bold text-xs sm:text-sm transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
+            title={t('action_fake_call_tip')}
+          >
+            <PhoneCall className="w-4 h-4 text-emerald-600 shrink-0" />
+            <span>{t('action_fake_call')}</span>
+          </button>
         </div>
 
         {/* Dignified Assurance Ribbon */}
@@ -345,19 +355,19 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
           {/* Card 1: Risk Assessment */}
-          <div className="p-6 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-5">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
+          <div className="p-5 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-4">
+            <div className="space-y-2.5">
+              <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
                 <ShieldCheck className="w-5 h-5 text-emerald-700" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-slate-950 text-base">
+                <h3 className="font-heading font-bold text-slate-950 text-sm sm:text-base">
                   {t('mod1_title')}
                 </h3>
-                <span className="text-[11px] font-sans text-slate-500 block">
+                <span className="text-[10px] sm:text-[11px] font-sans text-slate-500 block">
                   {t('mod1_subtitle')}
                 </span>
               </div>
@@ -375,16 +385,16 @@ export default function Home() {
           </div>
 
           {/* Card 2: SafeWalk */}
-          <div className="p-6 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-5">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
+          <div className="p-5 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-4">
+            <div className="space-y-2.5">
+              <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
                 <Car className="w-5 h-5 text-slate-700" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-slate-950 text-base">
+                <h3 className="font-heading font-bold text-slate-950 text-sm sm:text-base">
                   {t('mod2_title')}
                 </h3>
-                <span className="text-[11px] font-sans text-slate-500 block">
+                <span className="text-[10px] sm:text-[11px] font-sans text-slate-500 block">
                   {t('mod2_subtitle')}
                 </span>
               </div>
@@ -402,16 +412,16 @@ export default function Home() {
           </div>
 
           {/* Card 3: Evidence Locker */}
-          <div className="p-6 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-5">
-            <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
+          <div className="p-5 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-4">
+            <div className="space-y-2.5">
+              <div className="w-9 h-9 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center border border-slate-200">
                 <FolderLock className="w-5 h-5 text-slate-700" />
               </div>
               <div>
-                <h3 className="font-heading font-bold text-slate-950 text-base">
+                <h3 className="font-heading font-bold text-slate-950 text-sm sm:text-base">
                   {t('mod3_title')}
                 </h3>
-                <span className="text-[11px] font-sans text-slate-500 block">
+                <span className="text-[10px] sm:text-[11px] font-sans text-slate-500 block">
                   {t('mod3_subtitle')}
                 </span>
               </div>
@@ -426,6 +436,34 @@ export default function Home() {
               <span>{t('mod3_btn')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+
+          {/* Card 4: Fake Call Simulator */}
+          <div className="p-5 rounded-2xl card-senior-interactive flex flex-col justify-between space-y-4 bg-gradient-to-b from-white to-emerald-50/30 border-emerald-100/80">
+            <div className="space-y-2.5">
+              <div className="w-9 h-9 rounded-xl bg-emerald-50 text-emerald-800 flex items-center justify-center border border-emerald-200">
+                <PhoneCall className="w-5 h-5 text-emerald-700" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-slate-950 text-sm sm:text-base">
+                  {t('mod4_title')}
+                </h3>
+                <span className="text-[10px] sm:text-[11px] font-sans text-emerald-800 font-medium block">
+                  {t('mod4_subtitle')}
+                </span>
+              </div>
+              <p className="text-xs text-slate-600 leading-relaxed font-sans">
+                {t('mod4_desc')}
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setIsFakeCallOpen(true)}
+              className="text-xs font-heading font-bold text-emerald-800 hover:text-emerald-950 flex items-center gap-1.5 pt-2 border-t border-emerald-100 cursor-pointer"
+            >
+              <span>{t('mod4_btn')}</span>
+              <ArrowRight className="w-4 h-4" />
+            </button>
           </div>
         </div>
       </section>

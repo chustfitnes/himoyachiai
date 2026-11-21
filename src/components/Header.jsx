@@ -116,6 +116,18 @@ export default function Header() {
 
           {/* Right Action Dock: Responsively Balanced, Never Overflows on Mobile */}
           <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
+            {/* Soxta qo'ng'iroq (Fake Call) Quick Trigger */}
+            <button
+              type="button"
+              onClick={() => setIsFakeCallOpen(true)}
+              className="h-8 sm:h-9 inline-flex items-center gap-1.5 px-2.5 sm:px-3 rounded-full bg-emerald-50 hover:bg-emerald-100/90 active:bg-emerald-200 border border-emerald-200/90 text-emerald-800 text-xs font-heading font-semibold transition-all cursor-pointer active:scale-95 shadow-2xs whitespace-nowrap group"
+              title={t('action_fake_call_tip') || "Soxta qo‘ng‘iroq: Noqulay vaziyatdan chiqish"}
+              aria-label={t('action_fake_call') || "Soxta qo‘ng‘iroq"}
+            >
+              <IoCall className="w-3.5 h-3.5 text-emerald-600 group-hover:scale-110 transition-transform shrink-0" />
+              <span className="hidden sm:inline font-bold">{t('action_fake_call') || "Soxta qo‘ng‘iroq"}</span>
+            </button>
+
             {/* Language Selector Dropdown (Compact on Mobile) */}
             <div className="relative" ref={langRef}>
               <button
@@ -280,6 +292,21 @@ export default function Header() {
                   <span>102 IIB</span>
                 </a>
               </div>
+            </div>
+
+            {/* Mobile Soxta qo'ng'iroq action */}
+            <div className="pt-2 border-t border-slate-100">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsFakeCallOpen(true);
+                  setIsMobileMenuOpen(false);
+                }}
+                className="w-full px-3 py-2.5 rounded-xl bg-emerald-50/90 border border-emerald-200 text-emerald-900 text-xs font-heading font-bold flex items-center justify-center gap-2 hover:bg-emerald-100 transition-colors shadow-2xs"
+              >
+                <IoCall className="w-4 h-4 text-emerald-600 animate-pulse" />
+                <span>{t('action_fake_call') || "Soxta qo‘ng‘iroq"} (Kiruvchi qo‘ng‘iroq)</span>
+              </button>
             </div>
           </div>
         )}
