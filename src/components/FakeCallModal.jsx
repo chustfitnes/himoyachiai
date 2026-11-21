@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Phone, PhoneOff, PhoneCall, Volume2, User, Clock, CheckCircle2, X } from 'lucide-react';
+import { Phone, PhoneOff, PhoneCall, Volume2, User, Clock, CheckCircle2, X, Heart, Car, Briefcase } from 'lucide-react';
 
 const CALLER_PRESETS = [
-  { id: 'mom', name: 'Onam ❤️', subtitle: 'Mobil qo‘ng‘iroq', script: "Alo, qizim qayerdasan? Men pastda kutib turibman, tezroq chiq, do'kondan narsa olishimiz kerak edi!" },
-  { id: 'friend', name: 'Dugonam (Madina)', subtitle: 'Telegram audio', script: "Salom! Yetib keldingmi? Seni kutib o'tiribmiz, tezroq kel, hamma shu yerda!" },
+  { id: 'mom', name: 'Onam', subtitle: 'Mobil qo‘ng‘iroq', script: "Alo, qizim qayerdasan? Men pastda kutib turibman, tezroq chiq, do'kondan narsa olishimiz kerak edi!" },
+  { id: 'friend', name: 'Dugonam (Madina)', subtitle: 'Mobil qo‘ng‘iroq', script: "Salom! Yetib keldingmi? Seni kutib o'tiribmiz, tezroq kel, hamma shu yerda!" },
   { id: 'taxi', name: 'Taksi Haydovchisi', subtitle: 'Yandex Go', script: "Assalomu alaykum, manzilga yetib keldim, oq Chevrolet Gentra 01 A 777 BA, kutmoqdaman." },
   { id: 'work', name: 'Ishxona / Rahbar', subtitle: 'Favqulodda vazifa', script: "Assalomu alaykum, shoshilinch hisobot bo'yicha darhol kompyuterni ochishingiz kerak." },
 ];
@@ -263,8 +263,8 @@ export default function FakeCallModal({ isOpen, onClose }) {
 
           {/* Caller Details */}
           <div className="text-center space-y-3 pt-6">
-            <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-slate-700 mx-auto flex items-center justify-center text-3xl shadow-lg">
-              {caller.id === 'mom' ? '❤️' : caller.id === 'taxi' ? '🚖' : caller.id === 'work' ? '💼' : '👩'}
+            <div className="w-24 h-24 rounded-full bg-slate-800 border-2 border-slate-700 mx-auto flex items-center justify-center text-slate-300 shadow-lg">
+              {caller.id === 'mom' ? <Heart className="w-10 h-10 text-rose-400" /> : caller.id === 'taxi' ? <Car className="w-10 h-10 text-amber-400" /> : caller.id === 'work' ? <Briefcase className="w-10 h-10 text-blue-400" /> : <User className="w-10 h-10 text-emerald-400" />}
             </div>
             <div>
               <h2 className="text-2xl font-heading font-bold text-white tracking-tight">

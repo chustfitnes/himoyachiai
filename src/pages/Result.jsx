@@ -138,21 +138,26 @@ export default function Result() {
       {/* 2. Main Risk Indicator Gauge */}
       <RiskIndicator percent={calculatedPercent} level={risk_level} />
 
-      {/* 3. Detailed AI Clinical & Legal Evaluation Card */}
+      {/* 3. Detailed Institutional Legal Evaluation Card */}
       <div className="card-senior p-6 sm:p-8 space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-100">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
-              Xolis AI Diagnostika Xulosasi
-            </span>
-            <h1 className="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900 mt-0.5">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-400">
+                Rasmiy Huquqiy & Xavfsizlik Xulosasi
+              </span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-100 text-slate-600 border border-slate-200">
+                REF-{Date.now().toString().slice(-6)}
+              </span>
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-heading font-extrabold text-slate-950 mt-1">
               {riskLabel}
             </h1>
           </div>
 
           <div className="flex items-center gap-2.5 self-start sm:self-auto">
-            <span className="px-3.5 py-1.5 rounded-full text-xs font-heading font-bold bg-slate-100 text-slate-800 border border-slate-200">
-              Ishonchlilik ko‘rsatkichi: {confidence_pct || 95}%
+            <span className="px-3.5 py-1.5 rounded-full text-xs font-heading font-bold bg-slate-100 text-slate-900 border border-slate-200">
+              Ishonchlilik: {confidence_pct || 95}%
             </span>
             <AudioNarrator
               textToRead={`${riskLabel}. ${actionSummary}`}
@@ -163,16 +168,16 @@ export default function Result() {
         {/* Detected Signals / Risk Categories */}
         {signals.length > 0 && (
           <div className="space-y-2.5">
-            <span className="text-xs font-heading font-bold text-slate-600 uppercase tracking-wider block">
-              Aniqlangan Belgilar va Signal Toifalari:
+            <span className="text-xs font-heading font-bold text-slate-700 uppercase tracking-wider block">
+              Aniqlangan Asosiy Xavf Omillari:
             </span>
             <div className="flex flex-wrap gap-2">
               {signals.map((sig, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200/90 text-xs font-heading font-semibold text-slate-800 flex items-center gap-1.5"
+                  className="px-3 py-1.5 rounded-lg bg-slate-50 border border-slate-200 text-xs font-heading font-medium text-slate-800 flex items-center gap-1.5"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-600" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700" />
                   <span>{sig}</span>
                 </span>
               ))}
@@ -181,10 +186,10 @@ export default function Result() {
         )}
 
         {/* Legal Action Summary */}
-        <div className="p-5 rounded-xl bg-slate-50 border border-slate-200/80 space-y-3">
-          <h3 className="font-heading font-bold text-sm text-slate-900 flex items-center gap-2">
-            <Scale className="w-4 h-4 text-emerald-600 shrink-0" />
-            <span>Tavsiya Etilgan Harakatlar Yo‘l Xaritasi:</span>
+        <div className="p-5 rounded-xl bg-slate-50 border border-slate-200/90 space-y-2.5">
+          <h3 className="font-heading font-bold text-sm text-slate-950 flex items-center gap-2">
+            <Scale className="w-4 h-4 text-slate-700 shrink-0" />
+            <span>Tavsiya Etilgan Huquqiy Yo‘l Xaritasi:</span>
           </h3>
           <p className="text-xs sm:text-sm font-sans text-slate-700 leading-relaxed pl-6">
             {actionSummary}

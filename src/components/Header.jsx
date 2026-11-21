@@ -34,49 +34,54 @@ export default function Header() {
 
   const NAV_LINKS = [
     { to: '/', label: 'Bosh sahifa', end: true },
-    { to: '/describe', label: 'AI Diagnostika' },
+    { to: '/describe', label: 'Vaziyatni baholash' },
     { to: '/safewalk', label: 'SafeWalk' },
     { to: '/evidence', label: 'Dalillar Seyfi' },
-    { to: '/safety-plan', label: 'Reja' },
-    { to: '/resources', label: 'Yordam (1146)' },
+    { to: '/safety-plan', label: 'Xavfsizlik rejasi' },
+    { to: '/resources', label: 'Yordam markazlari (1146)' },
   ];
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80 transition-all">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/90 transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
           
-          {/* Brand Logo & Trust Tag */}
+          {/* Brand Identity & Institutional Subtitle */}
           <Link
             to="/"
-            className="flex items-center gap-2.5 group focus:outline-none shrink-0"
-            aria-label="HimoyaAI bosh sahifasi"
+            className="flex items-center gap-3 group focus:outline-none shrink-0"
+            aria-label="Himoya platformasi bosh sahifasi"
           >
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-700 via-emerald-600 to-emerald-500 text-white flex items-center justify-center shrink-0 shadow-sm shadow-emerald-600/20 group-hover:scale-105 transition-transform">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="w-10 h-10 rounded-xl bg-slate-900 text-emerald-400 flex items-center justify-center shrink-0 border border-slate-800 shadow-xs group-hover:bg-slate-800 transition-colors">
+              <ShieldCheck className="w-5 h-5 text-emerald-400" />
             </div>
             <div className="flex flex-col">
-              <span className="font-heading font-extrabold text-lg text-slate-900 tracking-tight leading-tight">
-                Himoya<span className="text-emerald-600">AI</span>
-              </span>
-              <span className="text-[10px] font-mono tracking-tight text-slate-400 font-medium leading-none hidden sm:block">
-                O‘zbekiston • Zero-Log
+              <div className="flex items-center gap-1.5">
+                <span className="font-heading font-extrabold text-lg text-slate-950 tracking-tight leading-none">
+                  HIMOYA
+                </span>
+                <span className="px-1.5 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 leading-none">
+                  CIVIC
+                </span>
+              </div>
+              <span className="text-[10px] font-sans font-medium text-slate-500 tracking-normal leading-tight mt-0.5 hidden sm:block">
+                O‘zbekiston Respublikasi • Huquqiy Himoya Tizimi
               </span>
             </div>
           </Link>
 
-          {/* Senior Desktop Navigation Pill */}
-          <nav className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1 rounded-xl border border-slate-200/60" aria-label="Asosiy menyu">
+          {/* Senior Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-1 bg-slate-100/90 p-1 rounded-xl border border-slate-200/80" aria-label="Asosiy menyu">
             {NAV_LINKS.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 end={item.end}
                 className={({ isActive }) =>
-                  `px-3.5 py-1.5 rounded-lg text-xs font-heading font-semibold transition-all ${
+                  `px-3 py-1.5 rounded-lg text-xs font-heading font-semibold transition-all ${
                     isActive
-                      ? 'bg-white text-slate-900 shadow-xs'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-white/50'
+                      ? 'bg-white text-slate-950 shadow-xs'
+                      : 'text-slate-600 hover:text-slate-950 hover:bg-white/60'
                   }`
                 }
               >
@@ -85,24 +90,24 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Quick Action Dock */}
-          <div className="flex items-center gap-2 sm:gap-2.5">
+          {/* Discreet Action Dock */}
+          <div className="flex items-center gap-2">
             
-            {/* Fake Call Trigger */}
+            {/* Fake Call Trigger (Restrained, discreet style) */}
             <button
               onClick={() => setIsFakeCallOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-amber-50 hover:bg-amber-100/80 border border-amber-200/80 text-amber-900 text-xs font-heading font-semibold transition-all cursor-pointer shadow-xs active:scale-95"
-              title="Soxta qo'ng'iroq simulyatori: Noqulay yoki xavfli vaziyatdan bahona bilan chiqib ketish uchun telefoningizga qo'ng'iroq simulyatsiyasi"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200/80 border border-slate-200 text-slate-700 text-xs font-heading font-medium transition-all cursor-pointer active:scale-95"
+              title="Soxta qo‘ng‘iroq: Noqulay vaziyatdan chiqib ketish uchun kiruvchi qo‘ng‘iroq simulyatsiyasi"
             >
-              <PhoneCall className="w-3.5 h-3.5 text-amber-600 shrink-0" />
-              <span className="hidden sm:inline">Soxta qo‘ng‘iroq</span>
+              <PhoneCall className="w-3.5 h-3.5 text-slate-600 shrink-0" />
+              <span className="hidden xl:inline">Soxta qo‘ng‘iroq</span>
             </button>
 
             {/* Stealth disguise button */}
             <button
               onClick={toggleStealthMode}
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-900 bg-slate-100/70 hover:bg-slate-200/80 border border-slate-200/60 transition-all cursor-pointer active:scale-95"
-              title="Niqob rejimi: Saytni oshxona retseptlari ko'rinishiga bir zumda aylantiradi"
+              className="p-2 rounded-lg text-slate-600 hover:text-slate-900 bg-slate-100 hover:bg-slate-200/80 border border-slate-200 transition-all cursor-pointer active:scale-95"
+              title="Niqob rejimi: Saytni oshxona retseptlari ko‘rinishiga o‘tkazish"
               aria-label="Niqob rejimini yoqish"
             >
               <Utensils className="w-4 h-4 text-slate-600" />
@@ -111,8 +116,8 @@ export default function Header() {
             {/* Language toggle */}
             <button
               onClick={cycleLang}
-              className="px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-600 hover:text-slate-900 bg-slate-100/70 hover:bg-slate-200/80 border border-slate-200/60 transition-all cursor-pointer active:scale-95"
-              title="Tilni o'zgartirish (O'zbekcha / Ўзбекча / Русский)"
+              className="px-2.5 py-1.5 rounded-lg text-xs font-mono font-bold text-slate-700 hover:text-slate-950 bg-slate-100 hover:bg-slate-200/80 border border-slate-200 transition-all cursor-pointer active:scale-95"
+              title="Tilni tanlash (O‘zbekcha / Ўзбекча / Русский)"
             >
               {langLabel}
             </button>
@@ -125,7 +130,7 @@ export default function Header() {
             {/* Mobile Hamburger Menu */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200/60 transition-colors cursor-pointer"
+              className="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 border border-slate-200/70 transition-colors cursor-pointer"
               aria-label="Menyuni ochish"
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
