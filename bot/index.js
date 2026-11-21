@@ -15,10 +15,32 @@ import { analyzeSituation } from '../lib/analysis/index.js';
 dotenv.config();
 
 const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const WEBAPP_URL = process.env.WEBAPP_URL || 'https://himoya-ai.uz';
+const WEBAPP_URL = process.env.WEBAPP_URL || 'https://himoyachiai2026.vercel.app/';
 
 if (!BOT_TOKEN) {
   console.warn('⚠️ TELEGRAM_BOT_TOKEN is not set in environment variables. Telegram bot will not start automatically.');
+}
+
+/**
+ * Sets up Telegram Chat Menu Button (the button at the bottom-left of the chat)
+ * to open the HimoyaAI Mini App directly with the configured URL.
+ */
+export async function configureBotMenu(botInstance) {
+  if (!botInstance?.telegram) return;
+  try {
+    await botInstance.telegram.setChatMenuButton({
+      menuButton: {
+        type: 'web_app',
+        text: '🌸 HimoyaAI ilovasi',
+        web_app: {
+          url: WEBAPP_URL,
+        },
+      },
+    });
+    console.log(`✅ Telegram Chat Menu Button muvaffaqiyatli o'rnatildi: ${WEBAPP_URL}`);
+  } catch (err) {
+    console.warn("⚠️ Chat Menu Button o'rnatishda ogohlantirish:", err.message);
+  }
 }
 
 export function createBot() {
@@ -175,8 +197,9 @@ Tezkor ishonch telefonlari:
 if (process.argv[1]?.replace(/\\/g, '/').endsWith('bot/index.js')) {
   const bot = createBot();
   if (bot) {
-    bot.launch(() => {
+    bot.launch(async () => {
       console.log('🤖 HimoyaAI Telegram Bot started successfully.');
+      await configureBotMenu(bot);
     });
 
     process.once('SIGINT', () => bot.stop('SIGINT'));

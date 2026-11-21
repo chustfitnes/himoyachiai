@@ -1,8 +1,12 @@
 import React from 'react';
 import { ShieldCheck, Phone, ShieldAlert, Lock, HeartHandshake } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAssessment } from '../context/AssessmentContext';
+import logoIconImg from '../assets/logo-icon.png';
 
 export default function EmergencyFooter() {
+  const { t } = useAssessment();
+
   return (
     <footer
       className="mt-auto border-t border-slate-200/80 bg-white/80 backdrop-blur-sm py-8 pb-safe text-slate-900"
@@ -18,7 +22,7 @@ export default function EmergencyFooter() {
           >
             <div>
               <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 group-hover:text-emerald-700 block">
-                Ishonch telefoni
+                {t('hotline_1146_label') || "Ishonch telefoni"}
               </span>
               <span className="text-lg font-heading font-extrabold text-slate-900 group-hover:text-emerald-800">
                 1146
@@ -33,7 +37,7 @@ export default function EmergencyFooter() {
           >
             <div>
               <span className="text-[10px] uppercase font-mono tracking-wider text-slate-400 group-hover:text-rose-700 block">
-                Ichki Ishlar (IIB)
+                {t('hotline_102_label') || "Ichki Ishlar (IIB)"}
               </span>
               <span className="text-lg font-heading font-extrabold text-slate-900 group-hover:text-rose-800">
                 102
@@ -75,8 +79,8 @@ export default function EmergencyFooter() {
 
         {/* Footer Meta Details */}
         <div className="pt-4 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 font-sans">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0 animate-pulse" />
+          <div className="flex items-center gap-2.5">
+            <img src={logoIconImg} alt="Himoya Emblem" className="w-5 h-5 object-contain shrink-0" />
             <span className="font-heading font-medium text-slate-700">
               HimoyaAI — O‘zbekiston xotin-qizlari va bolalari uchun xolis anonim tizim.
             </span>

@@ -1,21 +1,31 @@
 import React from 'react';
-import { LogOut } from 'lucide-react';
+import { IoLogOut } from 'react-icons/io5';
 import { useAssessment } from '../context/AssessmentContext';
 
-export default function PanicButton({ compact = false }) {
-  const { triggerPanicEscape } = useAssessment();
+export default function PanicButton({ compact = false, className = '' }) {
+  const { triggerPanicEscape, t } = useAssessment();
+
+  const fullLabel = t('panic_exit') || 'Tezkor Chiqish';
+  const shortLabel = t('action_panic') || t('panic_exit_short') || 'Chiqish';
 
   return (
     <button
       type="button"
       onClick={triggerPanicEscape}
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-rose-50 hover:bg-rose-600 active:bg-rose-700 text-rose-700 hover:text-white border border-rose-200/90 text-xs font-heading font-bold transition-all cursor-pointer shadow-xs active:scale-95 group"
-      title="Tezkor Chiqish: Sahifani yopadi va Google'ga o'tkazadi (Esc tugmasini 2 marta bosing)"
-      aria-label="Tezkor chiqish tugmasi"
+      className={`h-9 inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-3.5 rounded-full bg-gradient-to-r from-rose-600 via-rose-600 to-rose-700 hover:from-rose-700 hover:to-rose-800 active:from-rose-800 text-white font-heading font-bold text-xs shadow-xs hover:shadow-rose-600/25 ring-1 ring-rose-500/40 transition-all cursor-pointer active:scale-95 whitespace-nowrap group shrink-0 ${className}`}
+      title={t('panic_tip') || t('action_panic_tip') || "Tezkor Chiqish: Sahifani yopadi va Google'ga yo'naltiradi (Esc tugmasini 2 marta bosing)"}
+      aria-label="Tezkor favqulodda chiqish tugmasi"
     >
-      <LogOut className="w-3.5 h-3.5 shrink-0 group-hover:rotate-12 transition-transform" />
-      <span>Chiqish</span>
-      <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-mono font-bold rounded bg-rose-100 group-hover:bg-rose-700 group-hover:text-white text-rose-800 border border-rose-200/80 transition-colors">
+      <IoLogOut className="w-4 h-4 shrink-0 group-hover:translate-x-0.5 transition-transform" />
+      {compact ? (
+        <span>{shortLabel}</span>
+      ) : (
+        <>
+          <span className="hidden xl:inline">{fullLabel}</span>
+          <span className="xl:hidden">{shortLabel}</span>
+        </>
+      )}
+      <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 text-[10px] font-mono font-bold rounded-md bg-white/20 text-white/95 leading-none shadow-2xs">
         Esc
       </kbd>
     </button>

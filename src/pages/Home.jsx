@@ -41,36 +41,36 @@ export default function Home() {
   const SCENARIOS = {
     green: {
       id: 'green',
-      badge: 'Neytral / Tavsiyaviy',
+      badge: t('sc_green_badge'),
       score: 18,
-      title: 'Hissiy zo‘riqish & Oila ichki muloqot ehtiyoji',
-      caseText: '«Turmush o‘rtog‘im bilan ko‘p tushunmovchiliklar bo‘lyapti, shaxsiy chegaralarim e’tiborga olinmayapti, lekin hech qanday jismoniy yoki moliyaviy zo‘ravonlik yo‘q.»',
-      legalCitation: 'Oila kodeksi 4-moddasi (Oila a’zolarining huquqiy tengligi va o‘zaro yordami)',
-      actionText: 'Psixologik maslahat, shaxsiy chegaralarni mustahkamlash va oilaviy mediator xizmatlari. 1146 bepul psixolog yordami tavsiya etiladi.',
+      title: t('sc_green_title'),
+      caseText: t('sc_green_case'),
+      legalCitation: t('sc_green_legal'),
+      actionText: t('sc_green_action'),
       badgeClass: 'badge-status-green',
       progressColor: 'bg-emerald-600',
       textColor: 'text-emerald-800',
     },
     yellow: {
       id: 'yellow',
-      badge: 'Tazyiq va Nazorat',
+      badge: t('sc_yellow_badge'),
       score: 68,
-      title: 'Ruhiy, iqtisodiy cheklov & Doimiy nazorat',
-      caseText: '«Aloqa vositalarimni tekshiradi, yaqinlarim bilan ko‘rishishimni taqiqlaydi, moddiy tomondan to‘liq cheklab, ijtimoiy hayotdan ajratib qo‘ymoqda.»',
-      legalCitation: 'O‘zR 561-sonli Qonuni (Xotin-qizlarni tazyiq va zo‘ravonlikdan himoya qilish to‘g‘risida, 3-modda)',
-      actionText: 'Vakolatli organdan 30 kunga beriladigan va uzaytirilishi mumkin bo‘lgan davlat Himoya Orderini (Protection Order) talab qilish huquqi.',
+      title: t('sc_yellow_title'),
+      caseText: t('sc_yellow_case'),
+      legalCitation: t('sc_yellow_legal'),
+      actionText: t('sc_yellow_action'),
       badgeClass: 'badge-status-yellow',
       progressColor: 'bg-amber-600',
       textColor: 'text-amber-900',
     },
     red: {
       id: 'red',
-      badge: 'Shoshilinch Xavf',
+      badge: t('sc_red_badge'),
       score: 98,
-      title: 'Jismoniy tajovuz, erkinlikni cheklash & Hayotga tahdid',
-      caseText: '«Xonaga qulflab hayotimga tajovuz qildi, qurol yoki o‘tkir jism bilan qo‘rqitdi. Bolalarim bilan xavf ostida qoldim, zudlik bilan himoyaga muhtojman!»',
-      legalCitation: 'O‘zR Jinoyat Kodeksi 112-moddasi (O‘ldirish bilan qo‘rqitish) & 126-1-moddasi (Oilaviy zo‘ravonlik)',
-      actionText: 'ZUDLIK BILAN: 102 (Ichki ishlar) yoki 1146 (Milliy ishonch) ga qo‘ng‘iroq qiling. Tizim «Inson» markazi ixtisoslashgan boshpanasiga (Sheltir) yo‘naltiradi.',
+      title: t('sc_red_title'),
+      caseText: t('sc_red_case'),
+      legalCitation: t('sc_red_legal'),
+      actionText: t('sc_red_action'),
       badgeClass: 'badge-status-red',
       progressColor: 'bg-rose-600',
       textColor: 'text-rose-900',
@@ -83,20 +83,20 @@ export default function Home() {
 
   const FAQS = [
     {
-      q: "Fuqaro yozgan murojaatlar serverda yoki ma’lumotlar bazasida saqlanadimi?",
-      a: "Mutlaqo yo‘q. Platforma qat’iy Zero-Log (RAM-only) tamoyilida faoliyat yuritadi. Tahlil faqatgina serverning vaqtinchalik operativ xotirasida soniyalar ichida qayta ishlanadi va sahifa yopilishi bilan bir zumda o‘chiriladi. Hech qanday ma’lumotlar bazasi, foydalanuvchi profili yoki server jurnali (log) yuritilmaydi."
+      q: t('faq_q1'),
+      a: t('faq_a1'),
     },
     {
-      q: "Xizmatdan foydalanish bepulmi va ro‘yxatdan o‘tish talab qilinadimi?",
-      a: "Platforma 100% bepul, ochiq va notijorat jamoat xavfsizligi tizimidir. Pasport ma’lumotlari, telefon raqami yoki ro‘yxatdan o‘tish aslo talab etilmaydi."
+      q: t('faq_q2'),
+      a: t('faq_a2'),
     },
     {
-      q: "Tahlil xulosalari O‘zbekiston Respublikasi amaldagi qonunchiligiga muvofiqmi?",
-      a: "Ha. Tizim O‘zbekiston Respublikasining Jinoyat Kodeksi (JK 112, 126-1, 141-3, 165), Ma’muriy javobgarlik to‘g‘risidagi kodeksi hamda 561-sonli «Xotin-qizlarni tazyiq va zo‘ravonlikdan himoya qilish to‘g‘risida»gi Qonuni mezonlari asosida yuridik tavsiyalar beradi."
+      q: t('faq_q3'),
+      a: t('faq_a3'),
     },
     {
-      q: "Favqulodda tahdid yuzaga kelganda birinchi navbatda nima qilish zarur?",
-      a: "Agar hayotingizga yoki farzandlaringizga bevosita xavf solinayotgan bo‘lsa, saytdagi 'Tezkor SOS' tugmasidan foydalaning yoki zudlik bilan 102 (Ichki ishlar organlari) hamda 1146 (24/7 Milliy bepul ishonch telefoni) ga qo‘ng‘iroq qiling."
+      q: t('faq_q4'),
+      a: t('faq_a4'),
     }
   ];
 
@@ -111,20 +111,20 @@ export default function Home() {
         {/* Institutional Authority Badge */}
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900 text-slate-100 text-xs font-heading font-semibold shadow-xs">
           <ShieldCheck className="w-4 h-4 text-emerald-400" />
-          <span>O‘zbekiston Respublikasi • Huquqiy Himoya & Xavfsizlik Konsoli</span>
+          <span>{t('hero_badge')}</span>
         </div>
 
         {/* Hero Title: Serious, Non-Glitzy, Authoritative */}
         <h1 className="text-3xl sm:text-5xl lg:text-6xl font-heading font-extrabold tracking-tight text-slate-950 leading-[1.12]">
-          Tazyiq va zo‘ravonlikdan <br className="hidden sm:inline" />
+          {t('hero_title_1')} <br className="hidden sm:inline" />
           <span className="text-slate-900 underline decoration-emerald-500/40 decoration-4 underline-offset-8">
-            xolis huquqiy baholash va himoya
+            {t('hero_title_highlight')}
           </span>
         </h1>
 
         {/* Hero Subtitle */}
         <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto font-sans font-normal leading-relaxed">
-          Xotin-qizlar va bolalar huquqlarini ta’minlash, xavf darajasini professional baholash hamda zudlik bilan qonuniy yo‘l xaritasini shakllantirish bo‘yicha milliy tizim.
+          {t('hero_subtitle')}
         </p>
 
         {/* Primary Action Buttons */}
@@ -134,7 +134,7 @@ export default function Home() {
             className="w-full sm:w-auto px-8 py-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-sm transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 cursor-pointer"
           >
             <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span>Vaziyatni baholash va reja olish</span>
+            <span>{t('hero_cta_primary')}</span>
             <ArrowRight className="w-4 h-4 ml-1 text-slate-400" />
           </Link>
 
@@ -143,7 +143,7 @@ export default function Home() {
             className="w-full sm:w-auto px-6 py-4 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-slate-900 font-heading font-bold text-sm transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
           >
             <Car className="w-4 h-4 text-slate-600" />
-            <span>SafeWalk safar hamrohi</span>
+            <span>{t('hero_cta_safewalk')}</span>
           </Link>
 
           <button
@@ -152,7 +152,7 @@ export default function Home() {
             className="w-full sm:w-auto px-5 py-4 rounded-xl bg-slate-100 hover:bg-slate-200/80 border border-slate-200/60 text-slate-700 font-heading font-semibold text-sm transition-all shadow-xs flex items-center justify-center gap-2 cursor-pointer"
           >
             <HelpCircle className="w-4 h-4 text-slate-500" />
-            <span>1 daqiqalik test</span>
+            <span>{t('hero_cta_screener')}</span>
           </button>
         </div>
 
@@ -160,12 +160,12 @@ export default function Home() {
         <div className="p-3.5 rounded-xl bg-slate-100/80 border border-slate-200/80 max-w-xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-sans text-slate-600">
           <span className="flex items-center gap-1.5 font-medium">
             <Lock className="w-3.5 h-3.5 text-emerald-700 shrink-0" />
-            <span>100% Anonim: Foydalanuvchi ma’lumotlari saqlanmaydi</span>
+            <span>{t('hero_ribbon_anon')}</span>
           </span>
           <div className="flex items-center gap-3 font-semibold text-slate-900">
-            <a href="tel:1146" className="hover:text-emerald-700 hover:underline">1146 (Ishonch)</a>
+            <a href="tel:1146" className="hover:text-emerald-700 hover:underline">{t('hero_ribbon_hotline')}</a>
             <span className="text-slate-300">•</span>
-            <a href="tel:102" className="text-rose-700 hover:underline">102 (IIB)</a>
+            <a href="tel:102" className="text-rose-700 hover:underline">{t('hero_ribbon_police')}</a>
           </div>
         </div>
       </section>
@@ -178,10 +178,10 @@ export default function Home() {
           <div>
             <h2 className="text-base font-heading font-bold text-slate-950 flex items-center gap-2">
               <Scale className="w-4 h-4 text-slate-700" />
-              <span>O‘zR Qonunchiligi Asosidagi Huquqiy Mezonlar</span>
+              <span>{t('matrix_heading')}</span>
             </h2>
             <p className="text-xs text-slate-500 font-sans mt-0.5">
-              Turli darajadagi vaziyatlarga nisbatan qo‘llaniladigan rasmiy mezon va choralar:
+              {t('matrix_subheading')}
             </p>
           </div>
 
@@ -195,7 +195,7 @@ export default function Home() {
                   : 'text-slate-600 hover:text-slate-950'
               }`}
             >
-              1. Past xavf
+              {t('matrix_tab_green')}
             </button>
             <button
               onClick={() => setActiveScenario('yellow')}
@@ -205,7 +205,7 @@ export default function Home() {
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              2. O‘rta xavf
+              {t('matrix_tab_yellow')}
             </button>
             <button
               onClick={() => setActiveScenario('red')}
@@ -215,7 +215,7 @@ export default function Home() {
                   : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              3. Shoshilinch xavf
+              {t('matrix_tab_red')}
             </button>
           </div>
         </div>
@@ -246,7 +246,7 @@ export default function Home() {
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1.5">
               <span className="font-heading font-bold text-slate-950 flex items-center gap-1.5">
                 <Scale className="w-4 h-4 text-slate-700 shrink-0" />
-                <span>Normativ-huquqiy asos:</span>
+                <span>{t('matrix_basis_label')}</span>
               </span>
               <p className="text-slate-600 leading-relaxed pl-5.5">
                 {currentPreset.legalCitation}
@@ -256,7 +256,7 @@ export default function Home() {
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200/70 space-y-1.5">
               <span className="font-heading font-bold text-slate-950 flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-700 shrink-0" />
-                <span>Qonuniy himoya yo‘li:</span>
+                <span>{t('matrix_action_label')}</span>
               </span>
               <p className="text-slate-600 leading-relaxed pl-5.5">
                 {currentPreset.actionText}
@@ -269,14 +269,14 @@ export default function Home() {
         <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
           <span className="text-slate-500 font-sans flex items-center gap-1.5">
             <CheckCircle2 className="w-4 h-4 text-slate-600 shrink-0" />
-            <span>30 dan ortiq deterministik xavfsizlik filtrlari kafolatlangan.</span>
+            <span>{t('matrix_guarantee_note')}</span>
           </span>
           <div className="flex items-center gap-2">
             <Link
               to="/describe"
               className="px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center gap-1.5 transition-colors"
             >
-              <span>O‘z vaziyatingizni baholash</span>
+              <span>{t('matrix_cta_btn')}</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
@@ -287,49 +287,49 @@ export default function Home() {
       <section className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
         <div className="p-5 rounded-xl card-senior text-center space-y-1">
           <p className="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-900">
-            0 Bayt
+            {t('metric_zero_title')}
           </p>
           <p className="text-xs text-slate-800 font-heading font-bold">
-            Zero-Log Arxitekturasi
+            {t('metric_zero_label')}
           </p>
           <p className="text-[11px] text-slate-500 font-sans">
-            Serverda hech narsa saqlanmaydi
+            {t('metric_zero_desc')}
           </p>
         </div>
 
         <div className="p-5 rounded-xl card-senior text-center space-y-1">
           <p className="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-900">
-            24/7
+            {t('metric_speed_title')}
           </p>
           <p className="text-xs text-slate-800 font-heading font-bold">
-            Uzluksiz Yo‘naltirish
+            {t('metric_speed_label')}
           </p>
           <p className="text-[11px] text-slate-500 font-sans">
-            Tazyiqda bir zumda harakat rejasi
+            {t('metric_speed_desc')}
           </p>
         </div>
 
         <div className="p-5 rounded-xl card-senior text-center space-y-1">
           <p className="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-900">
-            30+
+            {t('metric_rules_title')}
           </p>
           <p className="text-xs text-slate-800 font-heading font-bold">
-            Qonunchilik Mezonlari
+            {t('metric_rules_label')}
           </p>
           <p className="text-[11px] text-slate-500 font-sans">
-            Deterministik xavfsizlik qoidalari
+            {t('metric_rules_desc')}
           </p>
         </div>
 
         <div className="p-5 rounded-xl card-senior text-center space-y-1">
           <p className="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-900">
-            14 Hudud
+            {t('metric_regions_title')}
           </p>
           <p className="text-xs text-slate-800 font-heading font-bold">
-            «Inson» Markazlari
+            {t('metric_regions_label')}
           </p>
           <p className="text-[11px] text-slate-500 font-sans">
-            Ijtimoiy va boshpana xizmatlari
+            {t('metric_regions_desc')}
           </p>
         </div>
       </section>
@@ -338,10 +338,10 @@ export default function Home() {
       <section className="space-y-6 max-w-5xl mx-auto">
         <div className="text-center space-y-1.5">
           <h2 className="text-2xl sm:text-3xl font-heading font-extrabold tracking-tight text-slate-950">
-            Asosiy Xavfsizlik Modullari
+            {t('modules_heading')}
           </h2>
           <p className="text-xs sm:text-sm text-slate-600 font-sans max-w-xl mx-auto">
-            Har qanday kutilmagan bosim yoki xavf yuzaga kelganda sizga hamroh bo‘luvchi maxfiy tizimlar
+            {t('modules_subheading')}
           </p>
         </div>
 
@@ -355,21 +355,21 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-slate-950 text-base">
-                  Vaziyatni Baholash
+                  {t('mod1_title')}
                 </h3>
                 <span className="text-[11px] font-sans text-slate-500 block">
-                  Deterministik tahlil va qonuniy reja
+                  {t('mod1_subtitle')}
                 </span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Vaziyatingizni O‘zR amaldagi qonunchiligi va 30+ xavfsizlik mezonlari asosida xolis tahlil qilib, tegishli moddalar va amaliy harakatlar rejasini beradi.
+                {t('mod1_desc')}
               </p>
             </div>
             <Link
               to="/describe"
               className="text-xs font-heading font-bold text-slate-900 hover:text-emerald-700 flex items-center gap-1.5 pt-2 border-t border-slate-100"
             >
-              <span>Vaziyatni tasvirlash</span>
+              <span>{t('mod1_btn')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -382,21 +382,21 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-slate-950 text-base">
-                  SafeWalk Safar Hamrohi
+                  {t('mod2_title')}
                 </h3>
                 <span className="text-[11px] font-sans text-slate-500 block">
-                  Aqlli taymer va GPS koordinata
+                  {t('mod2_subtitle')}
                 </span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Kechki taksi yoki yo‘lda avtomatik xavfsizlik nazorati. Vaqt tugaganda tasdiqlanmasa, ishonchli insoningizga lokatsiya va SOS signalini uzatadi.
+                {t('mod2_desc')}
               </p>
             </div>
             <Link
               to="/safewalk"
               className="text-xs font-heading font-bold text-slate-900 hover:text-emerald-700 flex items-center gap-1.5 pt-2 border-t border-slate-100"
             >
-              <span>Taymerni sozlash</span>
+              <span>{t('mod2_btn')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -409,21 +409,21 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="font-heading font-bold text-slate-950 text-base">
-                  Raqamli Dalillar Seyfi
+                  {t('mod3_title')}
                 </h3>
                 <span className="text-[11px] font-sans text-slate-500 block">
-                  JK 141-3 • JK 165 • Rasmiy Ariza
+                  {t('mod3_subtitle')}
                 </span>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed font-sans">
-                Telegram, Instagramdagi shantaj yoki tahdid xabarlarini xronologik tartiblab, ichki ishlar organlariga topshiriladigan rasmiy ariza matnini shakllantiradi.
+                {t('mod3_desc')}
               </p>
             </div>
             <Link
               to="/evidence"
               className="text-xs font-heading font-bold text-slate-900 hover:text-emerald-700 flex items-center gap-1.5 pt-2 border-t border-slate-100"
             >
-              <span>Arizani shakllantirish</span>
+              <span>{t('mod3_btn')}</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -437,39 +437,39 @@ export default function Home() {
         <div className="card-senior p-6 sm:p-7 space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="font-heading font-bold text-sm text-slate-950">
-              Vakolatli Davlat va Nodavlat Yordam Tarmoqlari:
+              {t('hotlines_title')}
             </h3>
-            <span className="text-xs text-slate-500 font-mono">24/7 Bepul</span>
+            <span className="text-xs text-slate-500 font-mono">{t('hotlines_free')}</span>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 text-xs">
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
               <div>
                 <strong className="text-slate-950 block font-heading font-bold text-base">1146</strong>
-                <span className="text-slate-600 font-sans">Ayollar ishonch telefoni</span>
+                <span className="text-slate-600 font-sans">{t('hotline_1146_label')}</span>
               </div>
               <a href="tel:1146" className="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-900 font-heading font-bold border border-slate-300">
-                Qo‘ng‘iroq
+                {t('btn_call')}
               </a>
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
               <div>
                 <strong className="text-slate-950 block font-heading font-bold text-base">102</strong>
-                <span className="text-slate-600 font-sans">Ichki ishlar (IIB)</span>
+                <span className="text-slate-600 font-sans">{t('hotline_102_label')}</span>
               </div>
               <a href="tel:102" className="px-3.5 py-1.5 rounded-lg bg-rose-700 hover:bg-rose-800 text-white font-heading font-bold">
-                Qo‘ng‘iroq
+                {t('btn_call')}
               </a>
             </div>
 
             <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-between">
               <div>
                 <strong className="text-slate-950 block font-heading font-bold text-base">1008</strong>
-                <span className="text-slate-600 font-sans">"Madad" bepul yuridik</span>
+                <span className="text-slate-600 font-sans">{t('hotline_1008_label')}</span>
               </div>
               <Link to="/resources" className="px-3.5 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-900 font-heading font-bold border border-slate-300">
-                Ko‘rish
+                {t('btn_view')}
               </Link>
             </div>
           </div>
@@ -479,10 +479,10 @@ export default function Home() {
         <div className="space-y-3">
           <div className="text-center pb-2">
             <h3 className="font-heading font-bold text-lg text-slate-950">
-              Ko‘p Beriladigan Savollar
+              {t('faq_heading')}
             </h3>
             <p className="text-xs text-slate-500 font-sans">
-              Maxfiylik, xavfsizlik va yuridik javobgarlik kafolatlari
+              {t('faq_subheading')}
             </p>
           </div>
 

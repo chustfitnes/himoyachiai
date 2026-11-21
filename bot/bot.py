@@ -15,7 +15,7 @@ from aiogram.types import WebAppInfo, InlineKeyboardMarkup, InlineKeyboardButton
 
 # Environment variables
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "7969372225:AAH_DEMO_TOKEN_PLACEHOLDER")
-MINI_APP_URL = os.getenv("TELEGRAM_MINI_APP_URL", "https://himoyaai.uz")
+MINI_APP_URL = os.getenv("TELEGRAM_MINI_APP_URL") or os.getenv("WEBAPP_URL") or "https://himoyachiai2026.vercel.app/"
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("HimoyaAIBot")

@@ -12,7 +12,20 @@ export function AssessmentProvider({ children }) {
   const [result, setResult] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [lang, setLang] = useState('uz'); // 'uz' | 'uz_cyr' | 'ru'
+  const [lang, setLangState] = useState(() => {
+    try {
+      return localStorage.getItem('himoya_lang') || 'uz';
+    } catch {
+      return 'uz';
+    }
+  });
+
+  const setLang = useCallback((newLang) => {
+    setLangState(newLang);
+    try {
+      localStorage.setItem('himoya_lang', newLang);
+    } catch {}
+  }, []);
   const [isStealthMode, setIsStealthMode] = useState(false);
 
   const toggleStealthMode = useCallback(() => {

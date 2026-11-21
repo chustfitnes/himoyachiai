@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useAssessment } from './context/AssessmentContext';
 import Header from './components/Header';
+import OfficialTopBanner from './components/OfficialTopBanner';
+import MobileBottomBar from './components/MobileBottomBar';
 import EmergencyFooter from './components/EmergencyFooter';
 import SkipLink from './components/SkipLink';
 import StealthView from './components/StealthView';
@@ -53,11 +55,14 @@ export default function App() {
       {/* Accessibility Skip Link */}
       <SkipLink />
 
+      {/* Official State Heraldic Trust Banner */}
+      <OfficialTopBanner />
+
       {/* Full-width sticky navigation bar */}
       <Header />
 
-      {/* Main Content Area */}
-      <main id="main-content" className="relative z-10 flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      {/* Main Content Area (extra bottom padding on mobile for MobileBottomBar) */}
+      <main id="main-content" className="relative z-10 flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pb-28 lg:pb-12">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/describe" element={<Describe />} />
@@ -73,6 +78,9 @@ export default function App() {
 
       {/* Emergency Persistent Footer */}
       <EmergencyFooter />
+
+      {/* Mobile-Only Native Bottom Navigation Tab Bar */}
+      <MobileBottomBar />
     </div>
   );
 }

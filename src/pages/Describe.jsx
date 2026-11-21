@@ -49,6 +49,7 @@ export default function Describe() {
     setIsLoading,
     error,
     setError,
+    t,
   } = useAssessment();
 
   const [validationMsg, setValidationMsg] = useState('');
@@ -139,17 +140,17 @@ export default function Describe() {
       <div className="flex items-center justify-between px-2 text-xs font-heading font-bold text-slate-400">
         <div className="flex items-center gap-2 text-slate-900">
           <span className="w-5 h-5 rounded-full bg-slate-900 text-white flex items-center justify-center text-[11px] font-mono">1</span>
-          <span>Holat bayoni</span>
+          <span>{t('step_1')}</span>
         </div>
         <div className="h-0.5 flex-1 mx-4 bg-slate-200" />
         <div className="flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-[11px] font-mono">2</span>
-          <span>Huquqiy tahlil</span>
+          <span>{t('step_2')}</span>
         </div>
         <div className="h-0.5 flex-1 mx-4 bg-slate-200" />
         <div className="flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center text-[11px] font-mono">3</span>
-          <span>Xulosa & Reja</span>
+          <span>{t('step_3')}</span>
         </div>
       </div>
 
@@ -159,15 +160,15 @@ export default function Describe() {
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-slate-100 text-slate-800 border border-slate-200 mb-2">
               <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
-              <span>O‘zbekiston Respublikasi • Huquqiy Baholash Konsoli</span>
+              <span>{t('describe_badge')}</span>
             </div>
             <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-950">
-              {isChildMode ? "Nima bo‘lganini aytib ber (Bolalar uchun rejim)" : "Vaziyatingizni xolis bayon qiling"}
+              {isChildMode ? t('describe_title_child') : t('describe_title')}
             </h1>
             <p className="text-xs sm:text-sm font-sans text-slate-600 mt-1 max-w-xl leading-relaxed">
               {isChildMode 
-                ? "Qo‘rqma, seni hech kim urishmaydi yoki ayblamaydi. Bu yerda yozganlaringni hech kim ko‘rmaydi va saqlanmaydi."
-                : "Yozganlaringiz to‘liq maxfiy (Zero-Log). Shaxsingiz so‘ralmaydi va serverda saqlanmaydi. O‘zbek yoki rus tilida yoza olasiz."}
+                ? t('describe_subtitle_child')
+                : t('describe_subtitle')}
             </p>
           </div>
 
@@ -183,7 +184,7 @@ export default function Describe() {
               }`}
             >
               <Baby className="w-4 h-4 text-amber-700" />
-              <span>{isChildMode ? "Kattalar rejimi" : "Bolalar uchun sodda rejim"}</span>
+              <span>{isChildMode ? t('btn_child_mode_on') : t('btn_child_mode_off')}</span>
             </button>
 
             {/* Quick Screener Link */}
@@ -193,7 +194,7 @@ export default function Describe() {
               className="px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-200 text-xs font-heading font-semibold text-slate-700 flex items-center gap-1.5 cursor-pointer shadow-xs"
             >
               <HelpCircle className="w-4 h-4 text-slate-600" />
-              <span>1 daqiqalik test</span>
+              <span>{t('btn_screener')}</span>
             </button>
           </div>
         </div>
@@ -306,7 +307,7 @@ export default function Describe() {
           <div className="flex items-center justify-between">
             <label className="text-xs font-heading font-bold uppercase tracking-wider text-slate-800 flex items-center gap-2">
               <Terminal className="w-4 h-4 text-slate-700" />
-              <span>Vaziyat tafsilotlari (Matn kiriting yoki ovoz bilan bayon qiling):</span>
+              <span>{t('textarea_label')}</span>
             </label>
             <div className="flex items-center gap-2">
               {inputText && (
@@ -335,15 +336,15 @@ export default function Describe() {
               spellCheck="false"
               placeholder={
                 isChildMode
-                  ? "Seni kimdir xafa qildimi yoki qo‘rqityaptimi? Nima bo‘lganini yoz..."
-                  : "Vaziyatni o‘z so‘zlaringiz bilan yozing: qachon sodir bo‘ldi, qanday tahdid yoki tazyiq o‘tkazildi, hozir qayerdasiz..."
+                  ? t('textarea_placeholder_child')
+                  : t('textarea_placeholder')
               }
               className="w-full p-4 sm:p-5 rounded-xl border border-slate-300 text-slate-900 placeholder:text-slate-400 text-sm sm:text-base focus:border-slate-800 focus:ring-4 focus:ring-slate-900/10 outline-none leading-relaxed transition-all font-sans bg-white shadow-xs"
             />
             
             {/* Character count counter */}
             <div className="flex items-center justify-between text-[11px] text-slate-400 font-mono pt-1.5 px-1">
-              <span>Kamida 5 ta belgi talab etiladi</span>
+              <span>{t('char_min_hint')}</span>
               <span>{inputText.length} belgi</span>
             </div>
           </div>
@@ -366,7 +367,7 @@ export default function Describe() {
           <div className="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 font-sans">
             <ShieldCheck className="w-4 h-4 text-emerald-700 mt-0.5 shrink-0" />
             <p>
-              <strong>100% Shaxsiy Daxlsizlik:</strong> Yozgan matningiz server xotirasida (RAM) faqat tahlil vaqtida qayta ishlanadi va darhol o‘chiriladi. Hech qanday ma’lumotlar bazasi yoki jurnal yuritilmaydi.
+              <strong>{t('privacy_banner_title')}</strong> {t('privacy_banner_desc')}
             </p>
           </div>
         </div>
@@ -380,12 +381,12 @@ export default function Describe() {
           {isLoading ? (
             <>
               <Loader2 className="w-5 h-5 animate-spin text-slate-300" />
-              <span>{streamPhase || "Huquqiy tahlil amalga oshirilmoqda..."}</span>
+              <span>{streamPhase || t('btn_analyzing')}</span>
             </>
           ) : (
             <>
               <ShieldCheck className="w-5 h-5 text-emerald-400" />
-              <span>Vaziyatni Baholash va Huquqiy Reja Olish</span>
+              <span>{t('btn_analyze_submit')}</span>
               <ArrowRight className="w-5 h-5 ml-1 text-slate-400" />
             </>
           )}

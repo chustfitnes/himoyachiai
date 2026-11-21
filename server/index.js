@@ -11,7 +11,7 @@ import path from 'path';
 import fs from 'fs';
 import apiRouter from './routes/api.js';
 import { securityHeadersMiddleware } from './middlewares/security.js';
-import { createBot } from '../bot/index.js';
+import { createBot, configureBotMenu } from '../bot/index.js';
 
 dotenv.config();
 
@@ -83,8 +83,9 @@ if (process.env.NODE_ENV !== 'test') {
       try {
         activeBot = createBot();
         if (activeBot) {
-          activeBot.launch(() => {
+          activeBot.launch(async () => {
             console.log('🤖 HimoyaAI Telegram Bot polling started successfully.');
+            await configureBotMenu(activeBot);
           }).catch((err) => {
             console.warn('⚠️ Telegram bot polling error (e.g. running in sandbox or network issue):', err.message);
           });
