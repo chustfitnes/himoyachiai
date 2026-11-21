@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { AlertCircle, MapPin, Send, Copy, Check, X, Phone, Loader2, Share2, ShieldAlert } from 'lucide-react';
 
 export default function QuickSosModal({ isOpen, onClose }) {
@@ -6,6 +7,26 @@ export default function QuickSosModal({ isOpen, onClose }) {
   const [loadingLoc, setLoadingLoc] = useState(false);
   const [locError, setLocError] = useState('');
   const [copied, setCopied] = useState(false);
+
+  // Senior Level: Lock body scroll to prevent background jitter
+  useEffect(() => {
+    if (!isOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
+  // Senior Level: Close on Escape key press
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen) return null;
 
@@ -56,16 +77,25 @@ export default function QuickSosModal({ isOpen, onClose }) {
   const smsLink = `sms:?body=${encodeURIComponent(sosMessage)}`;
   const telegramShareLink = `https://t.me/share/url?url=${encodeURIComponent(mapsUrl || 'Xavfsiz joyda emasman')}&text=${encodeURIComponent(sosMessage)}`;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in text-slate-900">
-      <div className="w-full max-w-md bg-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl border border-slate-200">
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="sos-modal-title"
+      onClick={onClose}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-md animate-fade-in text-slate-900 overflow-y-auto"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-md bg-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl border border-slate-200 my-auto ring-1 ring-black/5"
+      >
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center border border-rose-100">
+            <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center border border-rose-100 shrink-0">
               <AlertCircle className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-slate-900 text-base">
+              <h3 id="sos-modal-title" className="font-heading font-bold text-slate-900 text-base">
                 Tezkor SOS Signal
               </h3>
               <p className="text-xs text-slate-500 font-sans">
@@ -171,6 +201,7 @@ export default function QuickSosModal({ isOpen, onClose }) {
           </a>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

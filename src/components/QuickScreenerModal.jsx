@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAssessment } from '../context/AssessmentContext';
 import { requestRiskAssessment } from '../services/api';
@@ -43,6 +44,26 @@ export default function QuickScreenerModal({ isOpen, onClose }) {
   const [answers, setAnswers] = useState({});
   const [loading, setLoading] = useState(false);
 
+  // Senior Level: Lock body scroll to prevent background jitter
+  useEffect(() => {
+    if (!isOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
+  // Senior Level: Close on Escape key press
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
   if (!isOpen) return null;
 
   const handleSelect = (qId, val) => {
@@ -78,16 +99,26 @@ export default function QuickScreenerModal({ isOpen, onClose }) {
     }
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in text-slate-900">
-      <div className="w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto">
+  // Senior Architecture: Portaled directly to document.body to prevent containing-block / transform clipping
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="quick-screener-title"
+      onClick={onClose}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-md animate-fade-in text-slate-900 overflow-y-auto"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-lg bg-white rounded-2xl p-6 sm:p-8 space-y-6 shadow-2xl border border-slate-200 max-h-[90vh] overflow-y-auto my-auto ring-1 ring-black/5"
+      >
         <div className="flex items-center justify-between pb-3 border-b border-slate-100">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100 shrink-0">
               <HelpCircle className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-heading font-bold text-slate-900 text-base">
+              <h3 id="quick-screener-title" className="font-heading font-bold text-slate-900 text-base">
                 1 Daqiqalik Tezkor Test
               </h3>
               <p className="text-xs text-slate-500 font-sans">
@@ -98,6 +129,7 @@ export default function QuickScreenerModal({ isOpen, onClose }) {
           <button
             onClick={onClose}
             className="p-1.5 rounded-lg text-slate-400 hover:text-slate-700 hover:bg-slate-100 transition-colors cursor-pointer"
+            aria-label="Yopish"
           >
             <X className="w-5 h-5" />
           </button>
@@ -180,6 +212,7 @@ export default function QuickScreenerModal({ isOpen, onClose }) {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

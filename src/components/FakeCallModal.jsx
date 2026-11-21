@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { 
   IoCall, 
   IoMic, 
@@ -327,10 +328,20 @@ export default function FakeCallModal({ isOpen, onClose }) {
     return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
+  // Senior Level: Lock body scroll to prevent background jitter
+  useEffect(() => {
+    if (!isOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
   if (!isOpen) return null;
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-0 sm:p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in text-slate-900 select-none">
+  return createPortal(
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-0 sm:p-4 bg-slate-950/80 backdrop-blur-md animate-fade-in text-slate-900 select-none overflow-y-auto">
       
       {/* =========================================================================
           1. CONFIGURATION SCREEN: Senior-Level React-Icons Control Modal
@@ -831,6 +842,7 @@ export default function FakeCallModal({ isOpen, onClose }) {
           <div className="w-32 h-1 bg-white/40 rounded-full mx-auto mt-2" />
         </div>
       )}
-    </div>
+    </div>,
+    document.body
   );
 }

@@ -1,8 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { FileText, Printer, Copy, Check, X, ShieldAlert, ShieldCheck } from 'lucide-react';
 
 export default function ExportReportModal({ isOpen, onClose, result }) {
   const [copied, setCopied] = useState(false);
+
+  // Senior Level: Lock body scroll to prevent background jitter
+  useEffect(() => {
+    if (!isOpen) return;
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, [isOpen]);
+
+  // Senior Level: Close on Escape key press
+  useEffect(() => {
+    if (!isOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') onClose();
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
 
   if (!isOpen || !result) return null;
 
@@ -67,17 +88,26 @@ Eslatma: Ushbu xulosa dastlabki baholash bo'lib, profilaktika inspektori yoki "I
     window.print();
   };
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in text-slate-900">
-      <div className="relative w-full max-w-lg bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto">
+  return createPortal(
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="report-modal-title"
+      onClick={onClose}
+      className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 bg-slate-950/70 backdrop-blur-md animate-fade-in text-slate-900 overflow-y-auto"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-lg bg-white rounded-3xl border border-slate-200 shadow-2xl p-6 sm:p-8 max-h-[90vh] overflow-y-auto my-auto ring-1 ring-black/5"
+      >
         {/* Header */}
         <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
+            <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100 shrink-0">
               <FileText className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-base sm:text-lg font-heading font-bold text-slate-900">
+              <h2 id="report-modal-title" className="text-base sm:text-lg font-heading font-bold text-slate-900">
                 Xavfsizlik Bayonnomasi
               </h2>
               <span className="text-[11px] text-slate-500 font-sans">
@@ -178,6 +208,7 @@ Eslatma: Ushbu xulosa dastlabki baholash bo'lib, profilaktika inspektori yoki "I
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
