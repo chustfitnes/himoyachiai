@@ -105,16 +105,16 @@ Ariza tayyorlandi: HimoyaAI "Raqamli Dalillar Seyfi" orqali (Client-Side, Maxfiy
   };
 
   return (
-    <div className="py-4 sm:py-8 max-w-5xl mx-auto space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-5xl mx-auto space-y-4 sm:space-y-6 animate-fade-in text-slate-900">
       
       {/* Header */}
-      <div className="card-senior p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="card-senior p-4 sm:p-6 lg:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2">
-            <FolderLock className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1.5 sm:mb-2">
+            <FolderLock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
             <span>Raqamli Dalillar Seyfi (Evidence Locker)</span>
           </div>
-          <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-xl sm:text-3xl lg:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
             Dalillar Seyfi va Ariza Konstruktori
           </h1>
           <p className="text-xs sm:text-sm font-sans text-slate-600 mt-1 max-w-2xl leading-relaxed">
@@ -123,17 +123,17 @@ Ariza tayyorlandi: HimoyaAI "Raqamli Dalillar Seyfi" orqali (Client-Side, Maxfiy
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
-          <div className="px-3.5 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold text-slate-700 flex items-center gap-2">
+          <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] sm:text-xs font-mono font-bold text-slate-700 flex items-center gap-1.5 sm:gap-2">
             <Lock className="w-3.5 h-3.5 text-emerald-600" />
             <span>Client-Side / Serverga yozilmaydi</span>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
         
         {/* Left 2 Cols: Incident Details Form */}
-        <div className="lg:col-span-2 card-senior p-6 sm:p-8 space-y-6">
+        <div className="lg:col-span-2 card-senior p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
           <h2 className="text-base font-heading font-bold text-slate-900 flex items-center gap-2">
             <Terminal className="w-5 h-5 text-emerald-600" />
             <span>Tazyiq va Tahdid Tafsilotlari</span>

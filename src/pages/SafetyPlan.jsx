@@ -79,17 +79,17 @@ export default function SafetyPlan() {
   const progressPercent = Math.round((checkedCount / totalItems) * 100);
 
   return (
-    <div className="py-4 sm:py-8 max-w-4xl mx-auto space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-4xl mx-auto space-y-4 sm:space-y-6 animate-fade-in text-slate-900">
       
       {/* Title */}
-      <div className="card-senior p-6 sm:p-8 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="card-senior p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1.5 sm:mb-2">
+              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
               <span>Interaktiv Tayyorgarlik Rejasi</span>
             </div>
-            <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+            <h1 className="text-xl sm:text-3xl lg:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
               Shaxsiy Xavfsizlik Rejasi
             </h1>
             <p className="text-xs sm:text-sm font-sans text-slate-600 mt-1 max-w-xl leading-relaxed">
@@ -100,7 +100,7 @@ export default function SafetyPlan() {
           <button
             type="button"
             onClick={() => window.print()}
-            className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center gap-1.5 self-start sm:self-auto transition-colors cursor-pointer shadow-xs"
+            className="px-4 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 w-full sm:w-auto transition-colors cursor-pointer shadow-xs"
           >
             <Printer className="w-4 h-4" />
             <span>Chop etish (PDF)</span>
@@ -108,12 +108,12 @@ export default function SafetyPlan() {
         </div>
 
         {/* Progress Bar */}
-        <div className="pt-4 border-t border-slate-100 space-y-2">
+        <div className="pt-3 sm:pt-4 border-t border-slate-100 space-y-1.5 sm:space-y-2">
           <div className="flex items-center justify-between text-xs font-heading font-bold">
             <span className="text-slate-700">Tayyorgarlik darajasi:</span>
-            <span className="text-emerald-700 font-mono">{checkedCount} / {totalItems} ta band bajarildi ({progressPercent}%)</span>
+            <span className="text-emerald-700 font-mono">{checkedCount}/{totalItems} ({progressPercent}%)</span>
           </div>
-          <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
+          <div className="w-full bg-slate-100 rounded-full h-2 sm:h-2.5 overflow-hidden border border-slate-200">
             <div
               className="bg-emerald-600 h-full rounded-full transition-all duration-300"
               style={{ width: `${progressPercent}%` }}
@@ -123,11 +123,11 @@ export default function SafetyPlan() {
       </div>
 
       {/* Safety Sections */}
-      <div className="space-y-6">
+      <div className="space-y-4 sm:space-y-6">
         {SAFETY_SECTIONS.map((sec) => {
           const SectionIcon = sec.icon;
           return (
-            <div key={sec.id} className="card-senior p-6 sm:p-8 space-y-4">
+            <div key={sec.id} className="card-senior p-4 sm:p-6 lg:p-8 space-y-3 sm:space-y-4">
               <div className="flex items-center gap-3 pb-3 border-b border-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0 border border-emerald-100">
                   <SectionIcon className="w-5 h-5" />

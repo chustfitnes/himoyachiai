@@ -118,16 +118,16 @@ export default function SafeWalk() {
   const telegramShareLink = `https://t.me/share/url?url=${encodeURIComponent(userLocation?.mapsUrl || 'Xavfsiz joyda emasman')}&text=${encodeURIComponent(sosMessageText)}`;
 
   return (
-    <div className="py-4 sm:py-8 max-w-5xl mx-auto space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-5xl mx-auto space-y-4 sm:space-y-8 animate-fade-in text-slate-900">
       
       {/* Header */}
-      <div className="card-senior p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div className="card-senior p-4 sm:p-6 lg:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-600" />
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1.5 sm:mb-2">
+            <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
             <span>Virtual Safar Hamrohi (SafeWalk Protocol)</span>
           </div>
-          <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+          <h1 className="text-xl sm:text-3xl lg:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
             SafeWalk Safar Hamrohi
           </h1>
           <p className="text-xs sm:text-sm font-sans text-slate-600 mt-1 max-w-2xl leading-relaxed">
@@ -136,7 +136,7 @@ export default function SafeWalk() {
         </div>
 
         <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
-          <div className="px-3.5 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono font-bold text-slate-700 flex items-center gap-2">
+          <div className="px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-[11px] sm:text-xs font-mono font-bold text-slate-700 flex items-center gap-1.5 sm:gap-2">
             <Lock className="w-3.5 h-3.5 text-emerald-600" />
             <span>100% RAM / Zero-Log</span>
           </div>
@@ -145,12 +145,12 @@ export default function SafeWalk() {
 
       {/* 1. Trip Configuration Mode */}
       {tripStatus === 'idle' && (
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
           
           {/* Main Form (Left 2 cols) */}
-          <div className="lg:col-span-2 card-senior p-6 sm:p-8 space-y-6">
-            <h2 className="text-base font-heading font-bold text-slate-900 flex items-center gap-2">
-              <Terminal className="w-5 h-5 text-emerald-600" />
+          <div className="lg:col-span-2 card-senior p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
+            <h2 className="text-sm sm:text-base font-heading font-bold text-slate-900 flex items-center gap-2">
+              <Terminal className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               <span>Safar parametrlarini sozlang</span>
             </h2>
 
@@ -159,44 +159,47 @@ export default function SafeWalk() {
               <label className="text-xs font-heading font-bold text-slate-700 uppercase tracking-wider block">
                 Transport turi:
               </label>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-2 sm:gap-3">
                 <button
                   type="button"
                   onClick={() => setTripType('taxi')}
-                  className={`p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-2 transition-all cursor-pointer ${
+                  className={`p-2.5 sm:p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-1 sm:gap-2 transition-all cursor-pointer ${
                     tripType === 'taxi'
                       ? 'border-emerald-600 bg-emerald-50 text-emerald-900 shadow-xs'
                       : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
                   }`}
                 >
-                  <Car className="w-5 h-5 text-emerald-600" />
-                  <span>Taksi (Yandex/inDrive)</span>
+                  <Car className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                  <span className="truncate">Taksi</span>
+                  <span className="hidden sm:inline text-[10px] text-slate-500 font-normal">Yandex/inDrive</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setTripType('walk')}
-                  className={`p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-2 transition-all cursor-pointer ${
+                  className={`p-2.5 sm:p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-1 sm:gap-2 transition-all cursor-pointer ${
                     tripType === 'walk'
                       ? 'border-emerald-600 bg-emerald-50 text-emerald-900 shadow-xs'
                       : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
                   }`}
                 >
-                  <Footprints className="w-5 h-5 text-emerald-600" />
-                  <span>Piyoda yurish</span>
+                  <Footprints className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                  <span className="truncate">Piyoda</span>
+                  <span className="hidden sm:inline text-[10px] text-slate-500 font-normal">Yo‘l / Ko‘cha</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={() => setTripType('bus')}
-                  className={`p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-2 transition-all cursor-pointer ${
+                  className={`p-2.5 sm:p-4 rounded-xl border text-center font-heading font-bold text-xs sm:text-sm flex flex-col items-center gap-1 sm:gap-2 transition-all cursor-pointer ${
                     tripType === 'bus'
                       ? 'border-emerald-600 bg-emerald-50 text-emerald-900 shadow-xs'
                       : 'border-slate-200 bg-white text-slate-600 hover:bg-slate-50'
                   }`}
                 >
-                  <Navigation className="w-5 h-5 text-emerald-600" />
-                  <span>Avtobus / Metro</span>
+                  <Navigation className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600 shrink-0" />
+                  <span className="truncate">Avtobus</span>
+                  <span className="hidden sm:inline text-[10px] text-slate-500 font-normal">Metro / Marshrut</span>
                 </button>
               </div>
             </div>
@@ -319,16 +322,16 @@ export default function SafeWalk() {
 
       {/* 2. Active Escort Monitoring HUD */}
       {tripStatus === 'active' && (
-        <div className="max-w-2xl mx-auto card-senior p-8 sm:p-12 text-center space-y-8 shadow-md">
+        <div className="max-w-2xl mx-auto card-senior p-4 sm:p-8 lg:p-12 text-center space-y-6 sm:space-y-8 shadow-md">
           
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-mono font-bold">
-            <Radio className="w-4 h-4 text-emerald-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] sm:text-xs font-mono font-bold">
+            <Radio className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 animate-pulse" />
             <span>XAVFSIZLIK MONITORINGI FAOLLASHTIRILDI</span>
           </div>
 
           {/* Giant Countdown Clock */}
-          <div className="space-y-2">
-            <div className="text-6xl sm:text-7xl font-mono font-extrabold text-slate-900 tracking-tight">
+          <div className="space-y-1 sm:space-y-2">
+            <div className="text-5xl sm:text-7xl font-mono font-extrabold text-slate-900 tracking-tight">
               {formatTime(remainingSeconds)}
             </div>
             <p className="text-xs sm:text-sm font-sans text-slate-500">

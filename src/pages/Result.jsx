@@ -92,21 +92,21 @@ export default function Result() {
   };
 
   return (
-    <div className="py-4 sm:py-8 max-w-4xl mx-auto space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-4xl mx-auto space-y-4 sm:space-y-8 animate-fade-in text-slate-900">
       
       {/* 1. High Risk Emergency Alert Banner */}
       {isRed && (
-        <div className="p-6 rounded-2xl bg-rose-50 border border-rose-200/90 shadow-sm space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-sm">
-                <ShieldAlert className="w-7 h-7" />
+        <div className="p-4 sm:p-6 rounded-2xl bg-rose-50 border border-rose-200/90 shadow-sm space-y-3 sm:space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4">
+            <div className="flex items-start gap-3 sm:gap-4">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <ShieldAlert className="w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <div>
-                <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-rose-700 block">
+                <span className="text-[10px] sm:text-[11px] font-mono font-bold uppercase tracking-wider text-rose-700 block">
                   OGOHLANTIRISH // JIDDIY XAVF HOLATI
                 </span>
-                <h2 className="text-xl font-heading font-extrabold text-rose-950 leading-snug">
+                <h2 className="text-base sm:text-xl font-heading font-extrabold text-rose-950 leading-snug">
                   Hayotingiz yoki sog‘lig‘ingizga bevosita tajovuz mavjud!
                 </h2>
                 <p className="text-xs sm:text-sm font-sans text-rose-800 mt-1">
@@ -115,19 +115,19 @@ export default function Result() {
               </div>
             </div>
 
-            <div className="flex items-center gap-2 self-start sm:self-auto shrink-0">
+            <div className="grid grid-cols-2 sm:flex items-center gap-2 w-full sm:w-auto shrink-0">
               <a
                 href="tel:102"
-                className="px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-heading font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all"
+                className="px-3 sm:px-5 py-2.5 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all"
               >
-                <PhoneCall className="w-4 h-4" />
+                <PhoneCall className="w-4 h-4 shrink-0" />
                 <span>102 (IIB)</span>
               </a>
               <a
                 href="tel:1146"
-                className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center gap-1.5 shadow-sm transition-all"
+                className="px-3 sm:px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all"
               >
-                <PhoneCall className="w-4 h-4" />
+                <PhoneCall className="w-4 h-4 shrink-0" />
                 <span>1146 (Ishonch)</span>
               </a>
             </div>
@@ -139,7 +139,7 @@ export default function Result() {
       <RiskIndicator percent={calculatedPercent} level={risk_level} />
 
       {/* 3. Detailed Institutional Legal Evaluation Card */}
-      <div className="card-senior p-6 sm:p-8 space-y-6">
+      <div className="card-senior p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-100">
           <div>
             <div className="flex items-center gap-2">
@@ -260,32 +260,32 @@ export default function Result() {
       )}
 
       {/* 5. Senior Action Toolbar */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-2">
         <button
           type="button"
           onClick={handleStartOver}
-          className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-200 text-slate-700 font-heading font-semibold text-xs flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
+          className="w-full sm:w-auto px-5 py-3 rounded-xl bg-white hover:bg-slate-50 active:bg-slate-100 border border-slate-200 text-slate-700 font-heading font-semibold text-xs flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
         >
           <RotateCcw className="w-4 h-4 text-slate-500" />
           <span>Yangi matn kiritish (Xotirani tozalash)</span>
         </button>
 
-        <div className="flex items-center gap-3 w-full sm:w-auto">
+        <div className="grid grid-cols-2 sm:flex items-center gap-2.5 w-full sm:w-auto">
           <button
             type="button"
             onClick={() => setIsExportModalOpen(true)}
-            className="flex-1 sm:flex-initial px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center justify-center gap-2 shadow-xs transition-colors cursor-pointer"
+            className="px-4 sm:px-6 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 sm:gap-2 shadow-xs transition-colors cursor-pointer"
           >
-            <FileDown className="w-4 h-4" />
-            <span>Hisobotni Saqlash (PDF)</span>
+            <FileDown className="w-4 h-4 shrink-0" />
+            <span className="truncate">Hisobot (PDF)</span>
           </button>
 
           <Link
             to="/resources"
-            className="flex-1 sm:flex-initial px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs flex items-center justify-center gap-2 shadow-xs transition-colors"
+            className="px-4 sm:px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-heading font-bold text-xs flex items-center justify-center gap-1.5 sm:gap-2 shadow-xs transition-colors"
           >
-            <span>Yordam Markazlari</span>
-            <ChevronRight className="w-4 h-4" />
+            <span className="truncate">Yordam Markazlari</span>
+            <ChevronRight className="w-4 h-4 shrink-0" />
           </Link>
         </div>
       </div>

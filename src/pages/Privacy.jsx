@@ -3,15 +3,15 @@ import { ShieldCheck, EyeOff, Trash2, Globe, Send, AlertTriangle, Layers, Lock, 
 
 export default function Privacy() {
   return (
-    <div className="py-4 sm:py-8 max-w-4xl mx-auto space-y-6 sm:space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-4xl mx-auto space-y-4 sm:space-y-6 animate-fade-in text-slate-900">
       
       {/* Title */}
-      <div className="card-senior p-6 sm:p-8 space-y-2">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1">
-          <ShieldCheck className="w-4 h-4 text-emerald-600" />
+      <div className="card-senior p-4 sm:p-6 lg:p-8 space-y-2">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1">
+          <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
           <span>Xavfsizlik & Maxfiylik Bayonnomasi</span>
         </div>
-        <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+        <h1 className="text-xl sm:text-3xl lg:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
           Maxfiylik va Xavfsizlik Kafolati
         </h1>
         <p className="text-xs sm:text-sm text-slate-600 font-sans leading-relaxed">
@@ -20,10 +20,10 @@ export default function Privacy() {
       </div>
 
       {/* Architecture Features */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
         
         {/* Zero-Log Policy */}
-        <div className="p-6 rounded-2xl card-senior space-y-3">
+        <div className="p-4 sm:p-6 rounded-2xl card-senior space-y-2 sm:space-y-3">
           <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center border border-emerald-100">
             <ServerOff className="w-5 h-5" />
           </div>

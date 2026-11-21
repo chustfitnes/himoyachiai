@@ -9,15 +9,15 @@ export default function Resources() {
   const selectedRegion = regions.find((r) => r.region_id === selectedRegionId) || regions[0];
 
   return (
-    <div className="py-4 sm:py-8 max-w-5xl mx-auto space-y-8 animate-fade-in text-slate-900">
+    <div className="py-2 sm:py-8 max-w-5xl mx-auto space-y-4 sm:space-y-8 animate-fade-in text-slate-900">
       
       {/* Title */}
-      <div className="card-senior p-6 sm:p-8 space-y-3">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1">
-          <Building2 className="w-4 h-4 text-emerald-600" />
+      <div className="card-senior p-4 sm:p-6 lg:p-8 space-y-2 sm:space-y-3">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-heading font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-1">
+          <Building2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600" />
           <span>Respublika Davlat Xizmatlari Katalogi</span>
         </div>
-        <h1 className="text-2xl sm:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
+        <h1 className="text-xl sm:text-3xl lg:text-4xl font-heading font-extrabold tracking-tight text-slate-900">
           Yordam Resurslari va «Inson» Markazlari
         </h1>
         <p className="text-xs sm:text-sm font-sans text-slate-600 max-w-2xl leading-relaxed">
@@ -26,14 +26,14 @@ export default function Resources() {
       </div>
 
       {/* Primary Emergency Hotlines */}
-      <div className="space-y-4">
+      <div className="space-y-3 sm:space-y-4">
         <div className="flex items-center justify-between">
           <h2 className="text-xs font-heading font-bold uppercase tracking-wider text-slate-600">
             Respublika Bo‘yicha 24/7 Yagona Qisqa Raqamlar:
           </h2>
-          <span className="text-xs font-mono text-emerald-700 font-bold">24/7 Bepul Qo‘ng‘iroq</span>
+          <span className="text-[11px] sm:text-xs font-mono text-emerald-700 font-bold">24/7 Bepul</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
           <ContactCard contactKey="hotline_1146" />
           <ContactCard contactKey="police_102" />
           <ContactCard contactKey="cyber_102" />
@@ -44,23 +44,23 @@ export default function Resources() {
       </div>
 
       {/* Regional Centers Directory with Dropdown */}
-      <div className="card-senior p-6 sm:p-8 space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-100">
+      <div className="card-senior p-4 sm:p-6 lg:p-8 space-y-4 sm:space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 pb-4 border-b border-slate-100">
           <div>
-            <h2 className="text-lg font-heading font-bold text-slate-900 flex items-center gap-2">
-              <Building2 className="w-5 h-5 text-emerald-600" />
+            <h2 className="text-base sm:text-lg font-heading font-bold text-slate-900 flex items-center gap-2">
+              <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
               <span>Hududiy «Inson» va Ayollar Reabilitatsiya Markazlari</span>
             </h2>
-            <p className="text-xs text-slate-500 font-sans mt-0.5">
+            <p className="text-[11px] sm:text-xs text-slate-500 font-sans mt-0.5">
               Yashash hududingizni tanlang va eng yaqin markaz bilan bog‘laning:
             </p>
           </div>
 
-          <div className="min-w-[260px]">
+          <div className="w-full sm:min-w-[260px]">
             <select
               value={selectedRegionId}
               onChange={(e) => setSelectedRegionId(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-xs sm:text-sm font-heading font-bold text-slate-800 outline-none focus:border-emerald-600 focus:ring-4 focus:ring-emerald-600/10 shadow-xs cursor-pointer"
+              className="w-full px-3.5 py-2.5 rounded-xl bg-white border border-slate-300 text-xs sm:text-sm font-heading font-bold text-slate-800 outline-none focus:border-emerald-600 focus:ring-4 focus:ring-emerald-600/10 shadow-xs cursor-pointer"
             >
               {regions.map((reg) => (
                 <option key={reg.region_id} value={reg.region_id}>
@@ -73,7 +73,7 @@ export default function Resources() {
 
         {/* Selected Region Center Details Card */}
         {selectedRegion && (
-          <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-5">
+          <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-4 sm:space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <span className="text-[11px] font-heading font-bold uppercase tracking-wider text-emerald-700 block">
